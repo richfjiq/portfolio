@@ -8,10 +8,9 @@ import { useRouter } from 'next/router';
 
 interface Props {
 	children: ReactNode;
-	home?: boolean;
 }
 
-const Navbar: FC<Props> = ({ children, home = false }) => {
+const Navbar: FC<Props> = ({ children }) => {
 	const [nav, setNav] = useState(false);
 	const { pathname } = useRouter();
 
@@ -23,17 +22,35 @@ const Navbar: FC<Props> = ({ children, home = false }) => {
 		}
 	};
 
+	const bgImage = () => {
+		switch (pathname) {
+			case '/':
+				return 'flex flex-col items-center w-full h-[100vh] home';
+			case '/about':
+				return 'flex flex-col items-center w-full h-[100vh] about';
+			default:
+				return;
+		}
+	};
+
+	const bgColor = () => {
+		switch (pathname) {
+			case '/':
+				return 'bg-[#A8D0E6]/90';
+			case '/about':
+				return 'bg-[#49c5b6]/90';
+			default:
+				return;
+		}
+	};
+
 	const toggleNavbar = () => {
 		setNav((prev) => !prev);
 	};
 
 	return (
-		<div
-			className={
-				home ? 'flex flex-col items-center w-full h-[100vh] home' : 'flex flex-col w-full h-[100vh]'
-			}
-		>
-			<div className="flex items-center justify-center w-[100%] bg-[#A8D0E6]/90">
+		<div className={bgImage()}>
+			<div className={`flex items-center justify-center w-[100%] ${bgColor()}`}>
 				<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
 					<Image
 						src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
@@ -93,7 +110,7 @@ const Navbar: FC<Props> = ({ children, home = false }) => {
 							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
 								Home
 							</Link>
-							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-sm" href="/about" onClick={() => setNav(!nav)}>
 								About
 							</Link>
 							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
@@ -126,7 +143,7 @@ const Navbar: FC<Props> = ({ children, home = false }) => {
 					</div>
 				</div>
 			</div>
-			<div className="w-[100%] flex flex-1 items-center justify-center bg-[#A8D0E6]/90">
+			<div className={`w-[100%] flex flex-1 items-center justify-center ${bgColor()}`}>
 				{children}
 			</div>
 		</div>

@@ -14,13 +14,13 @@ const Home = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar home={true}>
+			<Navbar>
 				<div className="text-center">
 					<h1 className="py-4 text-700">
 						Hi, I&apos;m <span className="text-[#24305e]">Ricardo</span>
 					</h1>
 					<h1 className="py-4 text-700">A Full Stack Web Developer</h1>
-					<p className="py-4 text-600 max-w-[70%] m-auto">
+					<p className="py-4 text-600 text-base min-[420px]:text-2xl max-w-[70%] m-auto">
 						I&apos;m a developer capable to work on front-end web applications, back-end technology
 						and mobile applications.
 					</p>
