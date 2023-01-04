@@ -9,7 +9,7 @@ html {
 
 @layer base {
 	body {
-		@apply bg-[#A8D0E6] text-[#ffffff] tracking-wide;
+		@apply bg-[#ffffff] text-[#ffffff] tracking-wide;
 	}
 
 	h1,
@@ -54,4 +54,27 @@ html {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.skills {
+	background-image: url('../public/skills_bg.jpg');
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.projects {
+	background-image: url('../public/projects3_bg.jpg');
+	width: 100%;
+	height: 100vh;
+	background-size: contain;
+	background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+	.projects {
+		height: 100%;
+	}
 }

@@ -15,10 +15,12 @@ const Navbar: FC<Props> = ({ children }) => {
 	const { pathname } = useRouter();
 
 	const activeLink = (link: string) => {
+		if (link === '/projects' && link === pathname)
+			return 'ml-10 text-sm uppercase font-bold text-[#DF6C4F]';
 		if (link === pathname) {
 			return 'ml-10 text-sm uppercase font-bold text-[#24305e]';
 		} else {
-			return 'ml-10 text-sm uppercase hover:border-b border-[#24305e]';
+			return 'ml-10 text-sm uppercase hover:border-b border-[#ffffff]';
 		}
 	};
 
@@ -28,6 +30,10 @@ const Navbar: FC<Props> = ({ children }) => {
 				return 'flex flex-col items-center w-full h-[100vh] home';
 			case '/about':
 				return 'flex flex-col items-center w-full h-[100vh] about';
+			case '/skills':
+				return 'flex flex-col items-center w-full h-[100vh] skills';
+			case '/projects':
+				return 'flex flex-col items-center w-full h-[100vh] projects';
 			default:
 				return;
 		}
@@ -39,6 +45,25 @@ const Navbar: FC<Props> = ({ children }) => {
 				return 'bg-[#A8D0E6]/90';
 			case '/about':
 				return 'bg-[#49c5b6]/90';
+			case '/skills':
+				return 'bg-[#DF6C4F]/90';
+			case '/projects':
+				return 'bg-[#374885]/80';
+			default:
+				return;
+		}
+	};
+
+	const navbarColor = () => {
+		switch (pathname) {
+			case '/':
+				return 'bg-[#A8D0E6]';
+			case '/about':
+				return 'bg-[#49c5b6]';
+			case '/skills':
+				return 'bg-[#DF6C4F]';
+			case '/projects':
+				return 'bg-[#374885]';
 			default:
 				return;
 		}
@@ -87,7 +112,7 @@ const Navbar: FC<Props> = ({ children }) => {
 				<div
 					className={
 						nav
-							? 'fixed left-0 top-0 w-[55%] sm:w-[50%] h-[100%] bg-[#A8D0E6] py-10 px-6 ease-in duration-500'
+							? `fixed left-0 top-0 w-[55%] sm:w-[50%] h-[100%] ${navbarColor()} py-10 px-6 ease-in duration-500`
 							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-[#24305e]/70'
 					}
 				>
@@ -113,10 +138,10 @@ const Navbar: FC<Props> = ({ children }) => {
 							<Link className="py-4 text-sm" href="/about" onClick={() => setNav(!nav)}>
 								About
 							</Link>
-							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-sm" href="/skills" onClick={() => setNav(!nav)}>
 								Skills
 							</Link>
-							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-sm" href="/projects" onClick={() => setNav(!nav)}>
 								Projects
 							</Link>
 							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
@@ -126,17 +151,17 @@ const Navbar: FC<Props> = ({ children }) => {
 						<div className="pt-40">
 							<p className="uppercase tracking-widest ">Let&apos;s Connect</p>
 							<div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<FaLinkedinIn />
+								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+									<FaLinkedinIn className="text-[#24305e]" />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<FaGithub />
+								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+									<FaGithub className="text-[#24305e]" />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<AiOutlineMail />
+								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+									<AiOutlineMail className="text-[#24305e]" />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<BsFillPersonLinesFill />
+								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+									<BsFillPersonLinesFill className="text-[#24305e]" />
 								</div>
 							</div>
 						</div>

@@ -11,11 +11,14 @@ const About: FC = () => {
 					<div>
 						<h1 className="pt-6 min-[420px]:py-5">Who I Am</h1>
 						<p className="py-3 min-[420px]:py5 text-[#ffffff]-600 text-base min-[420px]:text-2xl">
+							Hi, I&apos;m Ricardo, a full stack web developer, I&apos;m able to work on building
+							responsive front end web and mobile applications as back-end applications (NodeJs).
+						</p>
+						<p className="py-3 min-[420px]:py5 text-[#ffffff]-600 text-base min-[420px]:text-2xl">
 							I graduated from university as a chemical engineer, I worked in the administration
 							area of ​​a local company for 12 years. I took a few programming classes in college,
 							ever since then I&apos;ve always had a taste for programming. After 12 years working
-							in the administration area, I decided to take the developer path, so I learned to
-							code.
+							in the administration area, I decided to take the developer path.
 						</p>
 						<p className="py-3 min-[420px]:py5 text-[#ffffff]-600 text-base min-[420px]:text-2xl">
 							I spent 3 years learning code, the last year I took some jobs, I applied my knowledge
