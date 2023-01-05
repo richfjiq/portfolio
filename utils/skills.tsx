@@ -25,12 +25,7 @@ export const skills = [
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159707/skills/xmzb2jjuaxj2lbzrs7oj.png',
 	},
 	{
-		title: 'React',
-		imageUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159706/skills/jxqftjov68ya7wtgcqsu.png',
-	},
-	{
-		title: 'React Native',
+		title: 'React/React Native',
 		imageUrl:
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159706/skills/jxqftjov68ya7wtgcqsu.png',
 	},

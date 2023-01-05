@@ -15,12 +15,12 @@ const Navbar: FC<Props> = ({ children }) => {
 	const { pathname } = useRouter();
 
 	const activeLink = (link: string) => {
-		if (link === '/projects' && link === pathname)
-			return 'ml-10 text-sm uppercase font-bold text-[#DF6C4F]';
+		if (link === '/projects' && pathname.includes('/projects'))
+			return 'ml-10 text-xl uppercase font-bold text-[#DF6C4F]';
 		if (link === pathname) {
-			return 'ml-10 text-sm uppercase font-bold text-[#24305e]';
+			return 'ml-10 text-xl uppercase font-bold text-[#24305e]';
 		} else {
-			return 'ml-10 text-sm uppercase hover:border-b border-[#ffffff]';
+			return 'ml-10 text-xl uppercase hover:border-b border-[#ffffff]';
 		}
 	};
 
@@ -29,11 +29,15 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/':
 				return 'flex flex-col items-center w-full h-[100vh] home';
 			case '/about':
-				return 'flex flex-col items-center w-full h-[100vh] about';
+				return 'flex flex-col items-center w-full h-[100vh]';
 			case '/skills':
 				return 'flex flex-col items-center w-full h-[100vh] skills';
 			case '/projects':
-				return 'flex flex-col items-center w-full h-[100vh] projects';
+				return 'flex flex-col items-center w-full h-[100vh]';
+			case '/projects/sportika':
+			case '/projects/sportika_mobile':
+			case '/projects/sportika_server':
+				return 'flex flex-col items-center w-full h-[100vh] project';
 			default:
 				return;
 		}
@@ -48,6 +52,9 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/skills':
 				return 'bg-[#DF6C4F]/90';
 			case '/projects':
+			case '/projects/sportika':
+			case '/projects/sportika_mobile':
+			case '/projects/sportika_server':
 				return 'bg-[#374885]/80';
 			default:
 				return;
@@ -63,6 +70,8 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/skills':
 				return 'bg-[#DF6C4F]';
 			case '/projects':
+			case '/projects/sportika':
+			case '/projects/sportika_mobile':
 				return 'bg-[#374885]';
 			default:
 				return;
@@ -108,12 +117,12 @@ const Navbar: FC<Props> = ({ children }) => {
 				</div>
 			</div>
 
-			<div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#24305e]/70' : ''}>
+			<div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#000]/50' : ''}>
 				<div
 					className={
 						nav
-							? `fixed left-0 top-0 w-[55%] sm:w-[50%] h-[100%] ${navbarColor()} py-10 px-6 ease-in duration-500`
-							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-[#24305e]/70'
+							? `fixed left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] ${navbarColor()} py-10 px-6 ease-in duration-500`
+							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-[#000]/50'
 					}
 				>
 					<div>
@@ -131,37 +140,37 @@ const Navbar: FC<Props> = ({ children }) => {
 						<div className="border-b border-[#ffffff]-300 mt-7" />
 					</div>
 					<div className="py-4">
-						<ul className="uppercase  flex flex-col">
-							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
+						<ul className="uppercase flex flex-col">
+							<Link className="py-4 text-lg" href="/" onClick={() => setNav(!nav)}>
 								Home
 							</Link>
-							<Link className="py-4 text-sm" href="/about" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-lg" href="/about" onClick={() => setNav(!nav)}>
 								About
 							</Link>
-							<Link className="py-4 text-sm" href="/skills" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-lg" href="/skills" onClick={() => setNav(!nav)}>
 								Skills
 							</Link>
-							<Link className="py-4 text-sm" href="/projects" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-lg" href="/projects" onClick={() => setNav(!nav)}>
 								Projects
 							</Link>
-							<Link className="py-4 text-sm" href="/" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-lg" href="/" onClick={() => setNav(!nav)}>
 								Contact
 							</Link>
 						</ul>
 						<div className="pt-40">
-							<p className="uppercase tracking-widest ">Let&apos;s Connect</p>
-							<div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+							<p className="uppercase tracking-widest text-lg">Let&apos;s Connect</p>
+							<div className="flex items-center justify-between my-4 w-full min-[500px]:w-[90%] min-[600px]:w-[95%]">
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<FaLinkedinIn className="text-[#24305e]" />
+									<FaLinkedinIn className="text-[#24305e] text-lg" />
 								</div>
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<FaGithub className="text-[#24305e]" />
+									<FaGithub className="text-[#24305e] text-lg" />
 								</div>
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<AiOutlineMail className="text-[#24305e]" />
+									<AiOutlineMail className="text-[#24305e] text-lg" />
 								</div>
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<BsFillPersonLinesFill className="text-[#24305e]" />
+									<BsFillPersonLinesFill className="text-[#24305e] text-lg" />
 								</div>
 							</div>
 						</div>
