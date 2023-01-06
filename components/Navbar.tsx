@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { BsSkype, BsTwitter } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+import { activeLink, bgColor, bgImage, navbarColor } from '../utils';
 
 interface Props {
 	children: ReactNode;
@@ -14,87 +15,13 @@ const Navbar: FC<Props> = ({ children }) => {
 	const [nav, setNav] = useState(false);
 	const { pathname } = useRouter();
 
-	const activeLink = (link: string) => {
-		if (link === '/projects' && pathname.includes('/projects'))
-			return 'ml-10 text-xl uppercase font-bold text-[#DF6C4F]';
-		if (link === pathname) {
-			return 'ml-10 text-xl uppercase font-bold text-[#24305e]';
-		} else {
-			return 'ml-10 text-xl uppercase hover:border-b border-[#ffffff]';
-		}
-	};
-
-	const bgImage = () => {
-		switch (pathname) {
-			case '/':
-				return 'flex flex-col items-center w-full h-[100vh] home';
-			case '/about':
-				return 'flex flex-col items-center w-full h-[100vh]';
-			case '/skills':
-				return 'flex flex-col items-center w-full h-[100vh] skills';
-			case '/projects':
-				return 'flex flex-col items-center w-full h-[100vh]';
-			case '/projects/sportika':
-			case '/projects/sportika_mobile':
-			case '/projects/sportika_server':
-			case '/projects/portfolio':
-				return 'flex flex-col items-center w-full h-[100vh] project';
-			case '/contact':
-				return 'flex flex-col items-center w-full h-[100vh] contact';
-			default:
-				return;
-		}
-	};
-
-	const bgColor = () => {
-		switch (pathname) {
-			case '/':
-				return 'bg-[#88bfdd]/90';
-			case '/about':
-				return 'bg-[#49c5b6]/90';
-			case '/skills':
-				return 'bg-[#DF6C4F]/90';
-			case '/projects':
-			case '/projects/sportika':
-			case '/projects/sportika_mobile':
-			case '/projects/sportika_server':
-			case '/projects/portfolio':
-				return 'bg-[#374885]/90';
-			case '/contact':
-				return 'bg-[#b49718]/90';
-			default:
-				return;
-		}
-	};
-
-	const navbarColor = () => {
-		switch (pathname) {
-			case '/':
-				return 'bg-[#88bfdd]';
-			case '/about':
-				return 'bg-[#49c5b6]';
-			case '/skills':
-				return 'bg-[#DF6C4F]';
-			case '/projects':
-			case '/projects/sportika':
-			case '/projects/sportika_mobile':
-			case '/projects/sportika_server':
-			case '/projects/portfolio':
-				return 'bg-[#374885]';
-			case '/contact':
-				return 'bg-[#b49718]';
-			default:
-				return;
-		}
-	};
-
 	const toggleNavbar = () => {
 		setNav((prev) => !prev);
 	};
 
 	return (
-		<div className={bgImage()}>
-			<div className={`flex items-center justify-center w-[100%] ${bgColor()}`}>
+		<div className={bgImage(pathname)}>
+			<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
 				<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
 					<Image
 						src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
@@ -104,19 +31,19 @@ const Navbar: FC<Props> = ({ children }) => {
 					/>
 					<div>
 						<ul className="hidden md:flex">
-							<Link className={activeLink('/')} href="/">
+							<Link className={activeLink('/', pathname)} href="/">
 								Home
 							</Link>
-							<Link className={activeLink('/about')} href="/about">
+							<Link className={activeLink('/about', pathname)} href="/about">
 								About
 							</Link>
-							<Link className={activeLink('/skills')} href="/skills">
+							<Link className={activeLink('/skills', pathname)} href="/skills">
 								Skills
 							</Link>
-							<Link className={activeLink('/projects')} href="/projects">
+							<Link className={activeLink('/projects', pathname)} href="/projects">
 								Projects
 							</Link>
-							<Link className={activeLink('/contact')} href="/contact">
+							<Link className={activeLink('/contact', pathname)} href="/contact">
 								Contact
 							</Link>
 						</ul>
@@ -131,7 +58,9 @@ const Navbar: FC<Props> = ({ children }) => {
 				<div
 					className={
 						nav
-							? `fixed left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] ${navbarColor()} py-10 px-6 ease-in duration-500`
+							? `fixed left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] ${navbarColor(
+									pathname,
+							  )} py-10 px-6 ease-in duration-500`
 							: 'fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-[#000]/50'
 					}
 				>
@@ -163,7 +92,7 @@ const Navbar: FC<Props> = ({ children }) => {
 							<Link className="py-4 text-lg" href="/projects" onClick={() => setNav(!nav)}>
 								Projects
 							</Link>
-							<Link className="py-4 text-lg" href="/" onClick={() => setNav(!nav)}>
+							<Link className="py-4 text-lg" href="/contact" onClick={() => setNav(!nav)}>
 								Contact
 							</Link>
 						</ul>
@@ -187,7 +116,7 @@ const Navbar: FC<Props> = ({ children }) => {
 					</div>
 				</div>
 			</div>
-			<div className={`w-[100%] flex flex-1 items-center justify-center ${bgColor()}`}>
+			<div className={`w-[100%] flex flex-1 items-center justify-center ${bgColor(pathname)}`}>
 				{children}
 			</div>
 		</div>

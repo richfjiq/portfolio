@@ -1,2 +1,3 @@
-export * as skills from './skills';
+export * from './skills';
 export * from './projects';
+export * from './navbarStyles';
