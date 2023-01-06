@@ -2,8 +2,8 @@ import React, { FC, ReactNode, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
+import { BsSkype, BsTwitter } from 'react-icons/bs';
 import { useRouter } from 'next/router';
 
 interface Props {
@@ -37,7 +37,10 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/projects/sportika':
 			case '/projects/sportika_mobile':
 			case '/projects/sportika_server':
+			case '/projects/portfolio':
 				return 'flex flex-col items-center w-full h-[100vh] project';
+			case '/contact':
+				return 'flex flex-col items-center w-full h-[100vh] contact';
 			default:
 				return;
 		}
@@ -46,7 +49,7 @@ const Navbar: FC<Props> = ({ children }) => {
 	const bgColor = () => {
 		switch (pathname) {
 			case '/':
-				return 'bg-[#A8D0E6]/90';
+				return 'bg-[#88bfdd]/90';
 			case '/about':
 				return 'bg-[#49c5b6]/90';
 			case '/skills':
@@ -55,7 +58,10 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/projects/sportika':
 			case '/projects/sportika_mobile':
 			case '/projects/sportika_server':
-				return 'bg-[#374885]/80';
+			case '/projects/portfolio':
+				return 'bg-[#374885]/90';
+			case '/contact':
+				return 'bg-[#b49718]/90';
 			default:
 				return;
 		}
@@ -64,7 +70,7 @@ const Navbar: FC<Props> = ({ children }) => {
 	const navbarColor = () => {
 		switch (pathname) {
 			case '/':
-				return 'bg-[#A8D0E6]';
+				return 'bg-[#88bfdd]';
 			case '/about':
 				return 'bg-[#49c5b6]';
 			case '/skills':
@@ -72,7 +78,11 @@ const Navbar: FC<Props> = ({ children }) => {
 			case '/projects':
 			case '/projects/sportika':
 			case '/projects/sportika_mobile':
+			case '/projects/sportika_server':
+			case '/projects/portfolio':
 				return 'bg-[#374885]';
+			case '/contact':
+				return 'bg-[#b49718]';
 			default:
 				return;
 		}
@@ -161,16 +171,16 @@ const Navbar: FC<Props> = ({ children }) => {
 							<p className="uppercase tracking-widest text-lg">Let&apos;s Connect</p>
 							<div className="flex items-center justify-between my-4 w-full min-[500px]:w-[90%] min-[600px]:w-[95%]">
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<FaLinkedinIn className="text-[#24305e] text-lg" />
-								</div>
-								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
 									<FaGithub className="text-[#24305e] text-lg" />
 								</div>
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
 									<AiOutlineMail className="text-[#24305e] text-lg" />
 								</div>
 								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-									<BsFillPersonLinesFill className="text-[#24305e] text-lg" />
+									<BsSkype className="text-[#24305e] text-lg" />
+								</div>
+								<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+									<BsTwitter className="text-[#24305e] text-lg" />
 								</div>
 							</div>
 						</div>

@@ -24,8 +24,8 @@ const ProjectDetails: FC<Props> = ({
 		<div className="flex flex-col items-center justify-center w-full">
 			<h1 className="mb-5">{title}</h1>
 			<div className="grid grid-cols-12 max-w-[1240px]">
-				<div className="col-start-2 col-span-10 min-[600px]:col-start-3 min-[600px]:col-span-8 min-[900px]:col-start-4 min-[900px]:col-span-6">
-					<img src={imgUrl} alt="sportika-images" className="rounded-lg" />
+				<div className="col-start-2 col-span-10 min-[600px]:col-start-3 min-[600px]:col-span-8 min-[900px]:col-start-4 min-[900px]:col-span-6 border-2 rounded-lg">
+					<img src={imgUrl} alt="sportika-images" className="overflow-hidden rounded-lg" />
 				</div>
 			</div>
 			<div className="mt-5 grid grid-cols-12 max-w-[1240px] items-center">

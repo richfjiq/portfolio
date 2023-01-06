@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FaGithub } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsSkype } from 'react-icons/bs';
+import { BsSkype, BsTwitter } from 'react-icons/bs';
 
 import { Navbar } from '../components';
 
@@ -27,17 +27,22 @@ const Home = () => {
 					<div className="flex items-center justify-between max-w-[330px] m-auto py-4">
 						<a href="https://github.com/richfjiq" target="_blank" rel="noreferrer">
 							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<FaGithub className="text-[#24305e]" />
+								<FaGithub className="text-[#24305e] text-xl" />
 							</div>
 						</a>
 						<a href="mailto:rfjiq1986@gmail.com">
 							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<AiOutlineMail className="text-[#24305e]" />
+								<AiOutlineMail className="text-[#24305e] text-xl" />
 							</div>
 						</a>
 						<a href="skype:live:.cid.612567d1033d66d2?chat">
 							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<BsSkype className="text-[#24305e]" />
+								<BsSkype className="text-[#24305e] text-xl" />
+							</div>
+						</a>
+						<a>
+							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
+								<BsTwitter className="text-[#24305e] text-xl" />
 							</div>
 						</a>
 					</div>

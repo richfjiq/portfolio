@@ -14,7 +14,7 @@ const ProjectItem: FC<Props> = ({ title, image, url, technology }) => {
 		<div>
 			<div className="grid grid-cols-12">
 				<img
-					className="col-start-2 col-span-10 min-[500px]:col-start-3 min-[500px]:col-span-8 rounded-xl group-hover:opacity-10"
+					className="col-start-2 col-span-10 min-[500px]:col-start-3 min-[500px]:col-span-8 rounded-xl group-hover:opacity-10 border-2"
 					src={image}
 					alt="sportika-images"
 					style={{ width: '100%', height: '160px', objectFit: 'fill' }}

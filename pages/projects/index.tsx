@@ -26,6 +26,13 @@ const Projects = () => {
 						url="/projects/sportika_server"
 						technology="Node.js"
 					/>
+
+					<ProjectItem
+						title="Portfolio"
+						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672968038/sportika/nkjbfrrpffxmxqykmp1p.png"
+						url="/projects/portfolio"
+						technology="Next.js"
+					/>
 				</div>
 			</div>
 		</Navbar>
