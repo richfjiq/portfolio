@@ -5,7 +5,7 @@ const Sportika = () => {
 	const { title, imgUrl, description, technologies, demoUrl, codeUrl } = projects[0];
 
 	return (
-		<Navbar>
+		<Navbar title="Project">
 			<ProjectDetails
 				title={title}
 				imgUrl={imgUrl}

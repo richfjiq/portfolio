@@ -4,12 +4,12 @@ import { Navbar } from '../components';
 
 const Contact = () => {
 	return (
-		<Navbar>
+		<Navbar title="Contact">
 			<div className="max-w-[1240px] w-full flex flex-col items-center">
 				<h1 className="mt-5 mb-20">Contact me...</h1>
 				<div className="flex justify-between max-w-[90%] min-[600px]:max-w-[75%] min-[700px]:max-w-[50%] w-full">
 					<a
-						href="https://github.com/richfjiq"
+						href="https://github.com/richfjiq?tab=repositories"
 						target="_blank"
 						rel="noreferrer"
 						className="bg-white/70 p-6 rounded-full cursor-pointer hover:scale-110 hover:bg-white ease-in duration-300"

@@ -6,7 +6,7 @@ import { skills } from '../utils';
 
 const Skills: FC = () => {
 	return (
-		<Navbar>
+		<Navbar title="Skills">
 			<div>
 				<div className="max-w-[1240px] pb-10 sm:pb-0 text-center mx-auto flex flex-col h-full">
 					<h2 className="p-4 sm:pb-10 sm:pt-0">Some of my skills...</h2>

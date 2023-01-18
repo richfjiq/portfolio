@@ -5,7 +5,7 @@ const Portfolio = () => {
 	const { title, imgUrl, description, technologies, demoUrl, codeUrl } = projects[3];
 
 	return (
-		<Navbar>
+		<Navbar title="Project">
 			<ProjectDetails
 				title={title}
 				imgUrl={imgUrl}

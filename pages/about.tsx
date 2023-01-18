@@ -6,7 +6,7 @@ import { Navbar } from '../components';
 
 const About: FC = () => {
 	return (
-		<Navbar>
+		<Navbar title="About">
 			<div>
 				<div className="max-w-[1240px] text-center m-auto gap-8">
 					<div className="px-10 pb-10 text-justify">
