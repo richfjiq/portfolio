@@ -14,8 +14,7 @@ const Home = () => {
 					</h1>
 					<h1 className="py-4 text-700">A Full Stack Web Developer</h1>
 					<p className="py-4 text-600 text-base min-[420px]:text-2xl max-w-[70%] m-auto">
-						I&apos;m a developer capable to work on front-end web applications, back-end technology
-						and mobile applications.
+						I love learning and creating web and mobile applications. I&apos;m a lifelong learner.
 					</p>
 					<div className="flex items-center justify-between max-w-[330px] m-auto py-4">
 						<a href="https://github.com/richfjiq?tab=repositories" target="_blank" rel="noreferrer">

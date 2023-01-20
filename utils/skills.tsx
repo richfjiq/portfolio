@@ -25,7 +25,12 @@ export const skills = [
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159707/skills/xmzb2jjuaxj2lbzrs7oj.png',
 	},
 	{
-		title: 'React/React Native',
+		title: 'React',
+		imageUrl:
+			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159706/skills/jxqftjov68ya7wtgcqsu.png',
+	},
+	{
+		title: 'React Native',
 		imageUrl:
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672159706/skills/jxqftjov68ya7wtgcqsu.png',
 	},
@@ -38,5 +43,20 @@ export const skills = [
 		title: 'Redux Toolkit',
 		imageUrl:
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672788218/skills/ugtjjdruqziw43lzydjt.png',
+	},
+	{
+		title: 'Material UI',
+		imageUrl:
+			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674069637/skills/o405ernblu4gswknwm8r.png',
+	},
+	{
+		title: 'Tailwind CSS',
+		imageUrl:
+			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674069642/skills/bywgxtzeupekfle299q4.png',
+	},
+	{
+		title: 'MongoDB',
+		imageUrl:
+			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674069642/skills/gey2oyoa9xjfjka6nlek.png',
 	},
 ];

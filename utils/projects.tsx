@@ -4,7 +4,7 @@ export const projects = [
 		imgUrl:
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672193619/sportika/atcsv9lccjvrwxcmznhw.png',
 		description:
-			'This is an app built with Next.JS. It&apos;s an sport store, users can navigate, find products by category, make a search, sign up and login, make purchases, pay the orders.',
+			"This is an app built with Next.JS. It's an sport store, users can navigate, find products by category, make a search, sign up and login, make purchases, pay the orders.",
 		technologies: ['Next.JS', 'Redux Toolkit', 'Material UI'],
 		demoUrl: 'https://sportika-shop.herokuapp.com/',
 		codeUrl: 'https://github.com/richfjiq/sportika-shop',
@@ -38,7 +38,7 @@ export const projects = [
 			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672968038/sportika/nkjbfrrpffxmxqykmp1p.png',
 		description:
 			'It is a web app built with Next.Js. This app is a website to showcase my work and let others know about myself.',
-		technologies: ['Next.JS', 'Tailwindcss', 'React'],
+		technologies: ['Next.JS', 'Tailwind CSS', 'React'],
 		demoUrl: '/',
 		codeUrl: 'https://github.com/richfjiq/sportikaServer',
 		technology: 'Next.js',
