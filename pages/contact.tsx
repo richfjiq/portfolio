@@ -43,7 +43,12 @@ const Contact = () => {
 							height={35}
 						/>
 					</a>
-					<a className="bg-white/70 p-6 rounded-full cursor-pointer hover:scale-110 hover:bg-white ease-in duration-300">
+					<a
+						className="bg-white/70 p-6 rounded-full cursor-pointer hover:scale-110 hover:bg-white ease-in duration-300"
+						href="https://twitter.com/ricardo_fs_dev"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<Image
 							src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672969346/skills/uze636gbumepaisnxhez.png"
 							alt="html"

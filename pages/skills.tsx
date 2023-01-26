@@ -8,8 +8,8 @@ const Skills: FC = () => {
 	return (
 		<Navbar title="Skills">
 			<div>
-				<div className="max-w-[1240px] pb-10 sm:pb-0 text-center mx-auto flex flex-col h-full">
-					<h2 className="p-4 sm:pb-10 sm:pt-0">Some of my skills...</h2>
+				<div className="max-w-[1240px] text-center mx-auto flex flex-col h-full">
+					<h2 className="p-4 pt-0 sm:pb-10">Some of my skills...</h2>
 					<div className="grid grid-cols-2 min-[440px]:grid-cols-3 min-[1000px]:grid-cols-4 gap-4 sm:gap-5 md:gap-10 px-5">
 						{skills.map((skill) => (
 							<div

@@ -14,10 +14,9 @@ const ProjectItem: FC<Props> = ({ title, image, url, technology }) => {
 		<div>
 			<div className="grid grid-cols-12">
 				<img
-					className="col-start-2 col-span-10 min-[500px]:col-start-3 min-[500px]:col-span-8 rounded-xl group-hover:opacity-10 border-2"
+					className="w-full h-[220px] min-[400px]:h-[270px] min-[500px]:h-[280px] object-cover col-start-1 col-span-12 min-[500px]:col-start-2 min-[500px]:col-span-10 min-[600px]:col-start-3 min-[600px]:col-span-8 min-[700px]:col-start-4 min-[700px]:col-span-6 min-[800px]:col-start-1 min-[800px]:col-span-12 min-[900px]:col-start-2 min-[900px]:col-span-10 min-[1050px]:col-start-3 min-[1050px]:col-span-8 rounded-xl group-hover:opacity-10 border-2"
 					src={image}
 					alt="sportika-images"
-					style={{ width: '100%', height: '160px', objectFit: 'fill' }}
 				/>
 			</div>
 			<div className="grid grid-cols-12">

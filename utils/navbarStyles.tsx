@@ -11,20 +11,20 @@ export const activeLink = (link: string, pathname: string) => {
 export const bgImage = (pathname: string) => {
 	switch (pathname) {
 		case '/':
-			return 'flex flex-col items-center w-full h-[100vh] home';
+			return 'flex flex-col items-center w-full home';
 		case '/about':
-			return 'flex flex-col items-center w-full h-[100vh]';
+			return 'flex flex-col items-center w-full about';
 		case '/skills':
-			return 'flex flex-col items-center w-full h-[100vh] skills';
+			return 'flex flex-col items-center w-full skills';
 		case '/projects':
-			return 'flex flex-col items-center w-full h-[100vh]';
+			return 'flex flex-col items-center w-full projects';
 		case '/projects/sportika':
 		case '/projects/sportika_mobile':
 		case '/projects/sportika_server':
 		case '/projects/portfolio':
-			return 'flex flex-col items-center w-full h-[100vh] project';
+			return 'flex flex-col items-center w-full project';
 		case '/contact':
-			return 'flex flex-col items-center w-full h-[100vh] contact';
+			return 'flex flex-col items-center w-full contact';
 		default:
 			return '';
 	}

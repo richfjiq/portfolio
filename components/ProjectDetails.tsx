@@ -23,9 +23,13 @@ const ProjectDetails: FC<Props> = ({
 	return (
 		<div className="flex flex-col items-center justify-center w-full">
 			<h1 className="mb-5">{title}</h1>
-			<div className="grid grid-cols-12 max-w-[1240px]">
+			<div className="grid grid-cols-12 max-w-[1240px] w-full">
 				<div className="col-start-2 col-span-10 min-[600px]:col-start-3 min-[600px]:col-span-8 min-[900px]:col-start-4 min-[900px]:col-span-6 border-2 rounded-lg">
-					<img src={imgUrl} alt="sportika-images" className="overflow-hidden rounded-lg" />
+					<img
+						src={imgUrl}
+						alt="sportika-images"
+						className="overflow-hidden rounded-lg w-full max-h-[180px] min-[400px]:max-h-[330px] min-[800px]:max-h-[350px] min-[1000px]:max-h-[370px]"
+					/>
 				</div>
 			</div>
 			<div className="mt-5 grid grid-cols-12 max-w-[1240px] items-center">
@@ -93,7 +97,7 @@ const ProjectDetails: FC<Props> = ({
 					</a>
 				</div>
 			</div>
-			<div className="grid grid-cols-12 max-w-[1240px] w-full mt-10">
+			<div className="grid grid-cols-12 max-w-[1240px] w-full mt-6 min-[400px]:mt-10">
 				<Link
 					className="col-start-2 col-span-2 min-[600px]:col-start-2 min-[600px]:col-span-1 text-lg text-center text-[#DF6C4F] rounded-md bg-white/70 hover:bg-white hover:scale-105 ease-in duration-300"
 					href="/projects"

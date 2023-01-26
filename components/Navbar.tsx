@@ -17,6 +17,19 @@ const Navbar: FC<Props> = ({ children, title }) => {
 	const [nav, setNav] = useState(false);
 	const { pathname } = useRouter();
 
+	// useEffect(() => {
+	// 	const documentHeight = () => {
+	// 		const doc = document.documentElement;
+	// 		doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+	// 	};
+
+	// 	window.addEventListener('resize', documentHeight);
+
+	// 	return () => {
+	// 		window.removeEventListener('resize', documentHeight);
+	// 	};
+	// }, []);
+
 	const toggleNavbar = () => {
 		setNav((prev) => !prev);
 	};
@@ -38,12 +51,14 @@ const Navbar: FC<Props> = ({ children, title }) => {
 			<div className={bgImage(pathname)}>
 				<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
 					<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
-						<Image
-							src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
-							alt="portfolio_logo"
-							width={100}
-							height={25}
-						/>
+						<Link href="/">
+							<Image
+								src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
+								alt="portfolio_logo"
+								width={100}
+								height={25}
+							/>
+						</Link>
 						<div>
 							<ul className="hidden md:flex">
 								<Link className={activeLink('/', pathname)} href="/">
@@ -134,7 +149,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 						</div>
 					</div>
 				</div>
-				<div className={`w-[100%] flex flex-1 items-center justify-center ${bgColor(pathname)}`}>
+				<div className={`w-[100%] flex grow items-center justify-center ${bgColor(pathname)}`}>
 					{children}
 				</div>
 			</div>
