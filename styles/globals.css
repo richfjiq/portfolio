@@ -36,7 +36,7 @@ html {
 }
 
 .home {
-	background-image: url('../public/images/home1_bg.jpg');
+	/* background-image: url('../public/images/home1_bg.jpg'); */
 	width: 100%;
 	height: 100svh;
 	background-size: cover;
@@ -50,7 +50,7 @@ html {
 }
 
 .skills {
-	background-image: url('../public/images/skills_bg.jpg');
+	/* background-image: url('../public/images/skills_bg.jpg'); */
 	width: 100%;
 	height: 100svh;
 	background-size: cover;
@@ -64,7 +64,7 @@ html {
 }
 
 .project {
-	background-image: url('../public/images/projects3_bg.jpg');
+	/* background-image: url('../public/images/projects3_bg.jpg'); */
 	width: 100%;
 	height: 100svh;
 	background-size: contain;
@@ -72,7 +72,7 @@ html {
 }
 
 .contact {
-	background-image: url('../public/images/contact_bg.jpg');
+	/* background-image: url('../public/images/contact_bg.jpg'); */
 	width: 100%;
 	height: 100svh;
 	background-size: cover;

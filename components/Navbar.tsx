@@ -6,7 +6,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useRouter } from 'next/router';
 
 import styles from './Navbar.module.css';
-import { bgColor, bgImage, navbarColor } from '../utils';
+import { bgColor, navbarColor } from '../utils';
 
 interface Props {
 	children: ReactNode;
@@ -35,7 +35,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
 			</Head>
-			<div className={bgImage(pathname)}>
+			<div className={styles.container}>
 				<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
 					<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
 						<Link href="/" className={styles.logo}>
@@ -93,7 +93,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 								? `fixed left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] ${navbarColor(
 										pathname,
 								  )} py-10 px-6 ease-in duration-500`
-								: 'fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-[#000]/50'
+								: 'fixed h-[100%] left-[-100%] top-0 p-10 ease-in duration-500 bg-[#000]/50'
 						}
 					>
 						<div>
@@ -134,9 +134,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 						</div>
 					</div>
 				</div>
-				<div className={`w-[100%] flex grow items-center justify-center ${bgColor(pathname)}`}>
-					{children}
-				</div>
+				<div className={styles.childrenContainer}>{children}</div>
 			</div>
 		</>
 	);

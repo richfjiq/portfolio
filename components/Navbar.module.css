@@ -1,3 +1,10 @@
+.container {
+	width: 100%;
+	height: 100svh;
+	display: flex;
+	flex-direction: column;
+}
+
 .navbarLink {
 	position: relative;
 	display: block;
@@ -15,10 +22,10 @@
 	display: block;
 	padding: 10px 10px;
 	text-transform: uppercase;
-	border-bottom: 2px solid #f7f1e3;
+	border-bottom: 2px solid #18dcff;
 	font-size: 22px;
 	font-weight: 700;
-	color: #f7f1e3;
+	color: #18dcff;
 	margin-left: 20px;
 }
 
@@ -49,4 +56,8 @@
 
 .logo:hover {
 	transform: scale(1.2);
+}
+
+.childrenContainer {
+	margin: auto 0;
 }
