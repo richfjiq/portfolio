@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useRouter } from 'next/router';
 
-import { activeLink, bgColor, bgImage, navbarColor } from '../utils';
+import styles from './Navbar.module.css';
+import { bgColor, bgImage, navbarColor } from '../utils';
 
 interface Props {
 	children: ReactNode;
@@ -15,19 +16,6 @@ interface Props {
 const Navbar: FC<Props> = ({ children, title }) => {
 	const [nav, setNav] = useState(false);
 	const { pathname } = useRouter();
-
-	// useEffect(() => {
-	// 	const documentHeight = () => {
-	// 		const doc = document.documentElement;
-	// 		doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
-	// 	};
-
-	// 	window.addEventListener('resize', documentHeight);
-
-	// 	return () => {
-	// 		window.removeEventListener('resize', documentHeight);
-	// 	};
-	// }, []);
 
 	const toggleNavbar = () => {
 		setNav((prev) => !prev);
@@ -50,7 +38,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 			<div className={bgImage(pathname)}>
 				<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
 					<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
-						<Link href="/">
+						<Link href="/" className={styles.logo}>
 							<Image
 								src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
 								alt="portfolio_logo"
@@ -60,19 +48,34 @@ const Navbar: FC<Props> = ({ children, title }) => {
 						</Link>
 						<div>
 							<ul className="hidden md:flex">
-								<Link className={activeLink('/', pathname)} href="/">
+								<Link
+									className={pathname === '/' ? styles.navbarActiveLink : styles.navbarLink}
+									href="/"
+								>
 									Home
 								</Link>
-								<Link className={activeLink('/about', pathname)} href="/about">
+								<Link
+									className={pathname === '/about' ? styles.navbarActiveLink : styles.navbarLink}
+									href="/about"
+								>
 									About
 								</Link>
-								<Link className={activeLink('/skills', pathname)} href="/skills">
+								<Link
+									className={pathname === '/skills' ? styles.navbarActiveLink : styles.navbarLink}
+									href="/skills"
+								>
 									Skills
 								</Link>
-								<Link className={activeLink('/projects', pathname)} href="/projects">
+								<Link
+									className={pathname === '/projects' ? styles.navbarActiveLink : styles.navbarLink}
+									href="/projects"
+								>
 									Projects
 								</Link>
-								<Link className={activeLink('/contact', pathname)} href="/contact">
+								<Link
+									className={pathname === '/contact' ? styles.navbarActiveLink : styles.navbarLink}
+									href="/contact"
+								>
 									Contact
 								</Link>
 							</ul>
@@ -128,23 +131,6 @@ const Navbar: FC<Props> = ({ children, title }) => {
 									Contact
 								</Link>
 							</ul>
-							{/* <div className="pt-40">
-								<p className="uppercase tracking-widest text-lg">Let&apos;s Connect</p>
-								<div className="flex items-center justify-between my-4 w-full min-[500px]:w-[90%] min-[600px]:w-[95%]">
-									<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-										<FaGithub className="text-[#24305e] text-lg" />
-									</div>
-									<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-										<AiOutlineMail className="text-[#24305e] text-lg" />
-									</div>
-									<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-										<BsSkype className="text-[#24305e] text-lg" />
-									</div>
-									<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-										<BsTwitter className="text-[#24305e] text-lg" />
-									</div>
-								</div>
-							</div> */}
 						</div>
 					</div>
 				</div>

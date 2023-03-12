@@ -13,32 +13,10 @@ const Home = () => {
 						I love learning and creating web and mobile applications. I&apos;m a lifelong learner.
 					</p>
 					<div className={styles.btnContainer}>
-						<Link className={styles.btnAboutMe} href="/contact">
+						<Link className={styles.btnAboutMe} href="/about">
 							More about me
 						</Link>
 					</div>
-					{/* <div className="flex justify-around w-[330px] m-auto py-4">
-						<a href="https://github.com/richfjiq" target="_blank" rel="noreferrer">
-							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<FaGithub className="text-[#24305e] text-xl" />
-							</div>
-						</a>
-						<a href="mailto:rfjiq1986@gmail.com">
-							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<AiOutlineMail className="text-[#24305e] text-xl" />
-							</div>
-						</a>
-						<a href="skype:live:.cid.612567d1033d66d2?chat">
-							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<BsSkype className="text-[#24305e] text-xl" />
-							</div>
-						</a>
-						<a href="https://twitter.com/ricardo_fs_dev" target="_blank" rel="noreferrer">
-							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
-								<BsTwitter className="text-[#24305e] text-xl" />
-							</div>
-						</a>
-					</div> */}
 				</div>
 			</div>
 		</Navbar>

@@ -1,13 +1,3 @@
-export const activeLink = (link: string, pathname: string) => {
-	if (link === '/projects' && pathname.includes('/projects'))
-		return 'ml-10 text-xl uppercase font-bold text-[#DF6C4F]';
-	if (link === pathname) {
-		return 'ml-10 text-xl uppercase font-bold text-[#24305e]';
-	} else {
-		return 'ml-10 text-xl uppercase hover:border-b border-[#ffffff]';
-	}
-};
-
 export const bgImage = (pathname: string) => {
 	switch (pathname) {
 		case '/':
@@ -35,17 +25,17 @@ export const bgColor = (pathname: string) => {
 		case '/':
 			return 'bg-[#2f3542]/90';
 		case '/about':
-			return 'bg-[#49c5b6]/90';
+			return 'bg-[#2f3542]/90';
 		case '/skills':
-			return 'bg-[#DF6C4F]/90';
+			return 'bg-[#2f3542]/90';
 		case '/projects':
 		case '/projects/sportika':
 		case '/projects/sportika_mobile':
 		case '/projects/sportika_server':
 		case '/projects/portfolio':
-			return 'bg-[#374885]/90';
+			return 'bg-[#2f3542]/90';
 		case '/contact':
-			return 'bg-[#b49718]/90';
+			return 'bg-[#2f3542]/90';
 		default:
 			return '';
 	}
@@ -56,17 +46,17 @@ export const navbarColor = (pathname: string) => {
 		case '/':
 			return 'bg-[#2f3542]';
 		case '/about':
-			return 'bg-[#49c5b6]';
+			return 'bg-[#2f3542]';
 		case '/skills':
-			return 'bg-[#DF6C4F]';
+			return 'bg-[#2f3542]';
 		case '/projects':
 		case '/projects/sportika':
 		case '/projects/sportika_mobile':
 		case '/projects/sportika_server':
 		case '/projects/portfolio':
-			return 'bg-[#374885]';
+			return 'bg-[#2f3542]';
 		case '/contact':
-			return 'bg-[#b49718]';
+			return 'bg-[#2f3542]';
 		default:
 			return '';
 	}
