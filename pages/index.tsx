@@ -1,22 +1,23 @@
-import { FaGithub } from 'react-icons/fa';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsSkype, BsTwitter } from 'react-icons/bs';
-
+import styles from './index.module.css';
 import { Navbar } from '../components';
+import Link from 'next/link';
 
 const Home = () => {
 	return (
 		<Navbar title="Front-End Developer">
 			<div>
 				<div className="text-center flex flex-col h-full mx-auto">
-					<h1 className="py-4 text-700">
-						Hi, I&apos;m <span className="text-[#24305e]">Ricardo</span>
-					</h1>
+					<h1 className="py-4 text-700">Hi, I&apos;m Ricardo</h1>
 					<h1 className="py-4 text-700">A Full Stack Web Developer</h1>
 					<p className="py-4 text-600 text-base min-[420px]:text-2xl max-w-[70%] m-auto">
 						I love learning and creating web and mobile applications. I&apos;m a lifelong learner.
 					</p>
-					<div className="flex justify-around w-[330px] m-auto py-4">
+					<div className={styles.btnContainer}>
+						<Link className={styles.btnAboutMe} href="/contact">
+							More about me
+						</Link>
+					</div>
+					{/* <div className="flex justify-around w-[330px] m-auto py-4">
 						<a href="https://github.com/richfjiq" target="_blank" rel="noreferrer">
 							<div className="bg-[#ffffff]/70 rounded-full shadow-lg shadow-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#ffffff] ease-in duration-300">
 								<FaGithub className="text-[#24305e] text-xl" />
@@ -37,7 +38,7 @@ const Home = () => {
 								<BsTwitter className="text-[#24305e] text-xl" />
 							</div>
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Navbar>

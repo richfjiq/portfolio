@@ -33,7 +33,7 @@ export const bgImage = (pathname: string) => {
 export const bgColor = (pathname: string) => {
 	switch (pathname) {
 		case '/':
-			return 'bg-[#88bfdd]/90';
+			return 'bg-[#2f3542]/90';
 		case '/about':
 			return 'bg-[#49c5b6]/90';
 		case '/skills':
@@ -54,7 +54,7 @@ export const bgColor = (pathname: string) => {
 export const navbarColor = (pathname: string) => {
 	switch (pathname) {
 		case '/':
-			return 'bg-[#88bfdd]';
+			return 'bg-[#2f3542]';
 		case '/about':
 			return 'bg-[#49c5b6]';
 		case '/skills':

@@ -1,0 +1,22 @@
+.btnContainer {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.btnAboutMe {
+	border: 3px solid #f7f1e3;
+	color: #f7f1e3;
+	padding: 15px 30px;
+	border-radius: 10px;
+	font-size: large;
+	font-weight: 600;
+	transition: all 0.5s;
+	position: absolute;
+}
+
+.btnAboutMe:hover {
+	transform: scale(1.1);
+	background-color: #f7f1e3;
+	color: #2f3542;
+}

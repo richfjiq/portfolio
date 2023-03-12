@@ -1,12 +1,11 @@
 import React, { FC, ReactNode, useState } from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub } from 'react-icons/fa';
-import { BsSkype, BsTwitter } from 'react-icons/bs';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useRouter } from 'next/router';
+
 import { activeLink, bgColor, bgImage, navbarColor } from '../utils';
-import Head from 'next/head';
 
 interface Props {
 	children: ReactNode;
@@ -129,7 +128,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 									Contact
 								</Link>
 							</ul>
-							<div className="pt-40">
+							{/* <div className="pt-40">
 								<p className="uppercase tracking-widest text-lg">Let&apos;s Connect</p>
 								<div className="flex items-center justify-between my-4 w-full min-[500px]:w-[90%] min-[600px]:w-[95%]">
 									<div className="bg-[#ffffff]/70 hover:bg-white/90 rounded-full shadow-lg shadow-white-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
@@ -145,7 +144,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 										<BsTwitter className="text-[#24305e] text-lg" />
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
