@@ -18,24 +18,3 @@ export const bgColor = (pathname: string) => {
 			return '';
 	}
 };
-
-export const navbarColor = (pathname: string) => {
-	switch (pathname) {
-		case '/':
-			return 'bg-[#2f3542]';
-		case '/about':
-			return 'bg-[#2f3542]';
-		case '/skills':
-			return 'bg-[#2f3542]';
-		case '/projects':
-		case '/projects/sportika':
-		case '/projects/sportika_mobile':
-		case '/projects/sportika_server':
-		case '/projects/portfolio':
-			return 'bg-[#2f3542]';
-		case '/contact':
-			return 'bg-[#2f3542]';
-		default:
-			return '';
-	}
-};

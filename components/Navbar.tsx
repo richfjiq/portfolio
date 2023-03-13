@@ -2,11 +2,19 @@ import React, { FC, ReactNode, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import {
+	AiOutlineClose,
+	AiOutlineMenu,
+	AiOutlineHome,
+	AiOutlineInfoCircle,
+	AiOutlineBulb,
+	AiOutlineFundProjectionScreen,
+	AiOutlineMail,
+} from 'react-icons/ai';
 import { useRouter } from 'next/router';
 
 import styles from './Navbar.module.css';
-import { bgColor, navbarColor } from '../utils';
+import { bgColor } from '../utils';
 
 interface Props {
 	children: ReactNode;
@@ -33,7 +41,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 				<link rel="manifest" href="/site.webmanifest" />
 				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 				<meta name="msapplication-TileColor" content="#da532c" />
-				<meta name="theme-color" content="#ffffff" />
+				<meta name="theme-color" content="#f7f1e3" />
 			</Head>
 			<div className={styles.container}>
 				<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
@@ -86,15 +94,19 @@ const Navbar: FC<Props> = ({ children, title }) => {
 					</div>
 				</div>
 
-				<div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#000]/50' : ''}>
+				<div
+					id="sidebarBg"
+					className={nav ? 'fixed left-0 top-0 w-full h-[100%] bg-[#000]/50 md:hidden' : ''}
+					onClick={() => setNav(false)}
+				>
 					<div
+						id="sidebar"
 						className={
 							nav
-								? `fixed left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] ${navbarColor(
-										pathname,
-								  )} py-10 px-6 ease-in duration-500`
-								: 'fixed h-[100%] left-[-100%] top-0 p-10 ease-in duration-500 bg-[#000]/50'
+								? `fixed bg-[#2f3542] left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%]  py-10 px-6 `
+								: 'fixed h-[100%] left-[-100%] top-0 p-10  bg-[#000]/50'
 						}
+						onClick={(e) => e.stopPropagation()}
 					>
 						<div>
 							<div className="flex w-full items-center justify-between ">
@@ -106,35 +118,72 @@ const Navbar: FC<Props> = ({ children, title }) => {
 								/>
 								<div
 									onClick={toggleNavbar}
-									className="cursor-pointer rounded-full p-1 bg-[#ffffff]"
+									className="cursor-pointer rounded-full p-1 bg-[#f7f1e3]"
 								>
 									<AiOutlineClose size={18} className="text-[#24305e]" />
 								</div>
 							</div>
-							<div className="border-b border-[#ffffff]-300 mt-7" />
+							<div className="border-b border-[#f7f1e3]-300 mt-7" />
 						</div>
 						<div className="py-4">
 							<ul className="uppercase flex flex-col">
-								<Link className="py-4 text-lg" href="/" onClick={() => setNav(!nav)}>
+								<Link
+									className={`py-4 text-lg flex items-center ${
+										pathname === '/' ? styles.sidebarActiveLink : {}
+									}`}
+									href="/"
+									onClick={() => setNav(!nav)}
+								>
+									<AiOutlineHome className="mr-3" />
 									Home
 								</Link>
-								<Link className="py-4 text-lg" href="/about" onClick={() => setNav(!nav)}>
+								<Link
+									className={`py-4 text-lg flex items-center ${
+										pathname === '/about' ? styles.sidebarActiveLink : {}
+									}`}
+									href="/about"
+									onClick={() => setNav(!nav)}
+								>
+									<AiOutlineInfoCircle className="mr-3" />
 									About
 								</Link>
-								<Link className="py-4 text-lg" href="/skills" onClick={() => setNav(!nav)}>
+								<Link
+									className={`py-4 text-lg flex items-center ${
+										pathname === '/skills' ? styles.sidebarActiveLink : {}
+									}`}
+									href="/skills"
+									onClick={() => setNav(!nav)}
+								>
+									<AiOutlineBulb className="mr-3" />
 									Skills
 								</Link>
-								<Link className="py-4 text-lg" href="/projects" onClick={() => setNav(!nav)}>
+								<Link
+									className={`py-4 text-lg flex items-center ${
+										pathname === '/projects' ? styles.sidebarActiveLink : {}
+									}`}
+									href="/projects"
+									onClick={() => setNav(!nav)}
+								>
+									<AiOutlineFundProjectionScreen className="mr-3" />
 									Projects
 								</Link>
-								<Link className="py-4 text-lg" href="/contact" onClick={() => setNav(!nav)}>
+								<Link
+									className={`py-4 text-lg flex items-center ${
+										pathname === '/contact' ? styles.sidebarActiveLink : {}
+									}`}
+									href="/contact"
+									onClick={() => setNav(!nav)}
+								>
+									<AiOutlineMail className="mr-3" />
 									Contact
 								</Link>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div className={styles.childrenContainer}>{children}</div>
+				<div className={styles.childrenContainer} style={nav ? { zIndex: '-10' } : {}}>
+					{children}
+				</div>
 			</div>
 		</>
 	);
