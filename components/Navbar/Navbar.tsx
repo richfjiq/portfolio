@@ -14,7 +14,6 @@ import {
 import { useRouter } from 'next/router';
 
 import styles from './Navbar.module.css';
-import { bgColor } from '../utils';
 
 interface Props {
 	children: ReactNode;
@@ -44,7 +43,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 				<meta name="theme-color" content="#f7f1e3" />
 			</Head>
 			<div className={styles.container}>
-				<div className={`flex items-center justify-center w-[100%] ${bgColor(pathname)}`}>
+				<div className={`flex items-center justify-center w-[100%] bg-[#2f3542]/90`}>
 					<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
 						<Link href="/" className={styles.logo}>
 							<Image

@@ -6,7 +6,7 @@
 }
 
 .sidebarActiveLink {
-	color: #18dcff;
+	color: #0984e3;
 	font-weight: 700;
 }
 
@@ -27,10 +27,10 @@
 	display: block;
 	padding: 10px 10px;
 	text-transform: uppercase;
-	border-bottom: 2px solid #18dcff;
+	border-bottom: 2px solid #0984e3;
 	font-size: 18px;
 	font-weight: 700;
-	color: #18dcff;
+	color: #0984e3;
 	margin-left: 10px;
 }
 

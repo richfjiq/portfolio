@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from './PreLoader.module.css';
 
-const PreLoader = () => {
+const PreLoader: FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.containerAnimation}>
