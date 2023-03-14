@@ -71,6 +71,7 @@
 
 .headerTyping {
 	position: relative;
+	line-height: 1.2;
 }
 
 .headerTyping::before,
