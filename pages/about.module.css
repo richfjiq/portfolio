@@ -1,0 +1,85 @@
+.container {
+	opacity: 0;
+	animation: fadeInUp 1s ease 1s forwards;
+}
+
+.headerContainer {
+	opacity: 0;
+	transform: translateY(-200px);
+	animation: headerAnimation 1s ease forwards;
+}
+
+.btnContainer {
+	margin: 1.25rem 0 1.5rem;
+	display: flex;
+	justify-content: center;
+	transform: translateY(200px);
+	opacity: 0;
+	animation: buttonAnimation 1s ease 2s forwards;
+}
+
+.button {
+	font-weight: 700;
+	position: relative;
+	letter-spacing: 1px;
+	padding: 18px 30px;
+	background: transparent;
+}
+
+.button:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: -1%;
+	top: -5px;
+	background-color: #d63031;
+	transform: skewX(30deg);
+	z-index: -1;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.button:hover:before {
+	transform: skewX(0);
+	left: 50%;
+	top: 0;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: 51%;
+	top: 5px;
+	background-color: #0984e3;
+	transform: skewX(30deg);
+	z-index: -1;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.button:hover:after {
+	transform: skewX(0);
+	left: 0;
+	top: 0;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes headerAnimation {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes buttonAnimation {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
