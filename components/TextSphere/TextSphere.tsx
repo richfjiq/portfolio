@@ -38,7 +38,11 @@ const TextSphere: FC = () => {
 				case window.innerWidth >= 700:
 					setRadius(150);
 					break;
+				case window.innerWidth >= 400:
+					setRadius(180);
+					break;
 				default:
+					setRadius(150);
 					break;
 			}
 		});

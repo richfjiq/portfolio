@@ -1,0 +1,148 @@
+.btnContainer {
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transform: translateY(500px);
+	animation: fromBottom 1s ease forwards;
+}
+
+.button {
+	display: inline-block;
+	font-weight: 700;
+	position: relative;
+	letter-spacing: 1px;
+	padding: 18px 30px;
+	background: transparent;
+}
+
+.button:before {
+	content: '';
+	position: absolute;
+	height: 150%;
+	width: 100%;
+	top: -25%;
+	left: 0;
+	border-left: 4px solid #d63031;
+	border-right: 4px solid #0984e3;
+	transition: all 0.4s;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 120%;
+	top: 0;
+	left: -10%;
+	border-top: 4px solid #d63031;
+	border-bottom: 4px solid #0984e3;
+	transition: all 0.4s;
+}
+
+.button:hover:before {
+	transform: rotateY(180deg);
+}
+
+.button:hover:after {
+	transform: rotateX(180deg);
+}
+
+.skill {
+	border-bottom: 4px solid #5d5454;
+	display: flex;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.skill:nth-child(1)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 50%;
+	border-bottom: 4px solid #d63031;
+}
+
+.skill:nth-child(2)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 25%;
+	border-bottom: 4px solid #0984e3;
+}
+
+.skill:nth-child(3)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 50%;
+	border-bottom: 4px solid #ffa502;
+}
+
+.skill:nth-child(4)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 50%;
+	border-bottom: 4px solid #5f27cd;
+}
+
+.skill:nth-child(5)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 25%;
+	border-bottom: 4px solid #27ae60;
+}
+
+.skill:nth-child(6)::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 25%;
+	border-bottom: 4px solid #ff9ff3;
+}
+
+.experienceContainer {
+	opacity: 0;
+	transform: translateX(-500px);
+	animation: fromLeft 1s ease forwards;
+}
+
+.skillsContainer {
+	opacity: 0;
+	transform: translateX(500px);
+	animation: fromRight 1s ease forwards;
+}
+
+@keyframes fromLeft {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fromRight {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fromBottom {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
