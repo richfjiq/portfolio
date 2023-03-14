@@ -85,18 +85,18 @@
 
 .headerTyping::before {
 	background: #2f3542;
-	animation: typewriter 4s steps(15) 0.5s forwards;
+	animation: typewriter 3s steps(16) 0.5s forwards;
 }
 
 .headerTyping::after {
 	width: 0.125em;
 	background: #f7f1e3;
-	animation: typewriter 4s steps(15) 0.5s forwards, blink 750ms steps(15) forwards;
+	animation: typewriter 3s steps(16) 0.5s forwards, blink 750ms steps(16) infinite;
 }
 
 .fadeInContainer {
 	opacity: 0;
-	animation: fadeInUp 2s ease 4.5s forwards;
+	animation: fadeInUp 2s ease 3.5s forwards;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -8,7 +8,7 @@ const Home = () => {
 			<div className={styles.container}>
 				<div className={styles.headerTypingContainer}>
 					<h1 className={`text-700 ${styles.headerTyping}`}>
-						Hi, I&apos;m <span className={styles.nameText}>Ricardo</span>
+						Hi, I&apos;m <span className={styles.nameText}>Ricardo</span>&nbsp;
 					</h1>
 				</div>
 				<div className={styles.fadeInContainer}>
