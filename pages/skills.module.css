@@ -1,6 +1,9 @@
 .btnContainer {
 	display: flex;
 	position: relative;
+	opacity: 0;
+	transform: translateY(500px);
+	animation: fromBottom 1s ease forwards;
 }
 
 .button {
@@ -109,4 +112,37 @@
 	height: 2px;
 	width: 25%;
 	border-bottom: 4px solid #ff9ff3;
+}
+
+.experienceContainer {
+	opacity: 0;
+	transform: translateX(-500px);
+	animation: fromLeft 1s ease forwards;
+}
+
+.skillsContainer {
+	opacity: 0;
+	transform: translateX(500px);
+	animation: fromRight 1s ease forwards;
+}
+
+@keyframes fromLeft {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fromRight {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fromBottom {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

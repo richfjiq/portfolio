@@ -9,7 +9,9 @@ const Skills: FC = () => {
 		<Navbar title="Skills">
 			<div className="max-w-[1240px] text-center mx-auto flex flex-col h-full">
 				<div className="grid grid-cols-12">
-					<div className="col-start-2 col-span-10 min-[700px]:col-span-6 min-[700px]:ml-10">
+					<div
+						className={`col-start-2 col-span-10 min-[700px]:col-span-6 min-[700px]:ml-10 ${styles.experienceContainer}`}
+					>
 						<h1 className="text-center min-[700px]:text-left mb-5 mt-5 min-[700px]:mt-0">
 							Skills & Experience
 						</h1>
@@ -26,7 +28,9 @@ const Skills: FC = () => {
 							Interested in working together? Send me a message.
 						</p>
 					</div>
-					<div className="flex flex-col justify-center col-start-2 col-span-10 min-[700px]:col-span-6 min-[700px]:mr-10 min-[700px]:pl-10">
+					<div
+						className={`flex flex-col justify-center col-start-2 col-span-10 min-[700px]:col-span-6 min-[700px]:mr-10 min-[700px]:pl-10 ${styles.skillsContainer}`}
+					>
 						<div className={styles.skill}>
 							<p className="font-semibold mb-2 text-base min-[800px]:text-xl">Front-end</p>
 						</div>
