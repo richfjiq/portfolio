@@ -1,8 +1,9 @@
+import { FC } from 'react';
 import Image from 'next/image';
-import React from 'react';
-import { Navbar } from '../components';
 
-const Contact = () => {
+import { Navbar } from '../../components';
+
+const Contact: FC = () => {
 	return (
 		<Navbar title="Contact">
 			<div className="max-w-[1240px] w-full flex flex-col items-center">

@@ -1,39 +1,29 @@
-import { Navbar, ProjectItem } from '../../components';
+import { FC } from 'react';
 
-const Projects = () => {
+import styles from './index.module.css';
+import { Navbar, ProjectItem } from '../../components';
+import { projects } from '../../utils';
+
+const Projects: FC = () => {
 	return (
 		<Navbar title="Projects">
-			<div className="my-10 flex flex-col max-w-[1240px] h-full px-10 pb-5 justify-center">
-				<h2 className="pb-10 text-center">What I&apos;ve Built</h2>
-				<div className="grid grid-cols-1 min-[800px]:grid-cols-2 gap-10 pb-10 min-[800px]:pb-0">
-					<ProjectItem
-						title="Sportika"
-						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674834192/sportika/v3ffvjmmv8f05r4jr80z.jpg"
-						url="/projects/sportika"
-						technology="Next JS"
-					/>
+			<div className={`max-w-[1240px] h-full flex flex-col mx-auto px-5 ${styles.container}`}>
+				<h1 className="mt-5 pb-5 text-center">What I&apos;ve Built</h1>
+				{projects.map((el, i) => {
+					const odd = (i + 1) % 2 === 0;
 
-					<ProjectItem
-						title="Sportika Mobile"
-						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672197842/sportika/w6gfpfisv5d4saii9rmv.png"
-						url="/projects/sportika_mobile"
-						technology="React Native"
-					/>
-
-					<ProjectItem
-						title="Sportika Server"
-						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672195477/sportika/bhboaabz7keak9opmcvi.png"
-						url="/projects/sportika_server"
-						technology="Node.js"
-					/>
-
-					<ProjectItem
-						title="Portfolio"
-						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672968038/sportika/nkjbfrrpffxmxqykmp1p.png"
-						url="/projects/portfolio"
-						technology="Next.js"
-					/>
-				</div>
+					return (
+						<ProjectItem
+							key={el.title}
+							title={el.title}
+							image={el.imgUrl}
+							urlDemo={el.demoUrl}
+							urlCode={el.codeUrl}
+							description={el.description}
+							odd={odd}
+						/>
+					);
+				})}
 			</div>
 		</Navbar>
 	);

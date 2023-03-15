@@ -1,0 +1,86 @@
+.firstContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.secondContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image {
+	width: 90%;
+	border-radius: 20px;
+	transform: skewY(7deg);
+	box-shadow: rgba(255, 255, 255, 0.55) 0px 5px 15px;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.imageOdd {
+	width: 90%;
+	border-radius: 20px;
+	transform: skewY(-7deg);
+	box-shadow: rgba(255, 255, 255, 0.55) 0px 5px 15px;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.image:hover {
+	transform: skewY(-7deg);
+}
+
+.imageOdd:hover {
+	transform: skewY(7deg);
+}
+
+.button {
+	padding: 15px 30px;
+	background-color: #0984e3;
+	cursor: pointer;
+	transition: all 0.5s;
+	position: relative;
+	font-weight: 600;
+}
+
+.button:before {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: -5px;
+	left: -5px;
+	border-top: 2px solid #d63031;
+	border-left: 2px solid #d63031;
+	transition: all 0.25s;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	bottom: -5px;
+	right: -5px;
+	border-bottom: 2px solid #d63031;
+	border-right: 2px solid #d63031;
+	transition: all 0.25s;
+}
+
+.button:hover:before,
+.button:hover:after {
+	height: 100%;
+	width: 100%;
+}
+
+@media (max-width: 500px) {
+	.image {
+		width: 100%;
+	}
+
+	.imageOdd {
+		width: 100%;
+	}
+}
