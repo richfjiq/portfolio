@@ -12,7 +12,7 @@ const Skills: FC = () => {
 					<div
 						className={`col-start-2 col-span-10 min-[700px]:col-span-6 min-[700px]:ml-10 ${styles.experienceContainer}`}
 					>
-						<h1 className="text-center min-[700px]:text-left mb-5 mt-5 min-[700px]:mt-0">
+						<h1 className="text-center min-[700px]:text-left mb-5 mt-5 min-[770px]:mt-10">
 							Skills & Experience
 						</h1>
 						<p className="py-5 text-justify text-[#f7f1e3]-600 text-base min-[700px]:text-left min-[800px]:text-xl">

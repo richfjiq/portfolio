@@ -2,7 +2,7 @@ export const projects = [
 	{
 		title: 'Sportika',
 		imgUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674834192/sportika/v3ffvjmmv8f05r4jr80z.jpg',
+			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678847783/portfolio/zgfwszl7ztpbzzldnpik.png',
 		description:
 			"This is an app built with Next.JS. It's an sport store, users can navigate, find products by category, make a search, sign up and login, make purchases, pay the orders.",
 		technologies: ['Next.JS', 'Redux Toolkit', 'Material UI'],

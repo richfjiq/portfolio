@@ -1,11 +1,12 @@
-import { Navbar, ProjectItem } from '../../components';
+import { Navbar } from '../../components';
 
 const Projects = () => {
 	return (
 		<Navbar title="Projects">
-			<div className="my-10 flex flex-col max-w-[1240px] h-full px-10 pb-5 justify-center">
-				<h2 className="pb-10 text-center">What I&apos;ve Built</h2>
-				<div className="grid grid-cols-1 min-[800px]:grid-cols-2 gap-10 pb-10 min-[800px]:pb-0">
+			<div className="max-w-[1240px] h-full flex flex-col mx-auto px-5">
+				<h1 className="mt-14 pb-10 text-center">What I&apos;ve Built</h1>
+				{/* <ProjectItem /> */}
+				{/* <div className="grid grid-cols-1 min-[800px]:grid-cols-2 gap-10 pb-10 min-[800px]:pb-0">
 					<ProjectItem
 						title="Sportika"
 						image="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674834192/sportika/v3ffvjmmv8f05r4jr80z.jpg"
@@ -33,7 +34,7 @@ const Projects = () => {
 						url="/projects/portfolio"
 						technology="Next.js"
 					/>
-				</div>
+				</div> */}
 			</div>
 		</Navbar>
 	);
