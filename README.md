@@ -12,10 +12,10 @@ It's an application built with Next.js and TypeScript, to showcase my projects, 
 
 ## Screenshots
 
-![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674495456/sportika/rtrylt3gvvyj1gz0o0l3.jpg)
-![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674495456/sportika/bhtz2tapqapdxmltcjir.jpg)
-![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674495456/sportika/vebxtqx0nuav5uqlauew.jpg)
-![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1674495456/sportika/pf6verztenmztwxolqhu.jpg)
+![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678892685/portfolio_readme/aag4tpipt0ydytdwfla3.png)
+![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678892686/portfolio_readme/kw3ykjbraqsnahiyzdym.png)
+![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678892686/portfolio_readme/rht1gwquea3hvcx0ygun.png)
+![image](https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678892686/portfolio_readme/hcykchusdqqvaavrc4uv.png)
 
 ## Technologies
 
