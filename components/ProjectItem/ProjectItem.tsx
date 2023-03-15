@@ -39,7 +39,11 @@ const ProjectItem: FC<Props> = ({ title, image, urlDemo, urlCode, description, o
 			<div
 				className={`mb-5 w-[100%] min-[800px]:mb-0 min-[600px]:w-[90%] min-[800px]:w-[55%] ${styles.secondContainer}`}
 			>
-				<img src={image} className={odd ? styles.imageOdd : styles.image} alt="project_picture" />
+				<img
+					src={`./images/${image}.png`}
+					className={odd ? styles.imageOdd : styles.image}
+					alt="project_picture"
+				/>
 			</div>
 		</div>
 	);

@@ -1,8 +1,7 @@
 export const projects = [
 	{
 		title: 'Sportika',
-		imgUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678847783/portfolio/zgfwszl7ztpbzzldnpik.png',
+		imgUrl: 'sportika',
 		description:
 			"This is an app built with Next.JS. It's an sport store, users can navigate, find products by category, make a search, sign up and login, make purchases, pay the orders.",
 		technologies: ['Next.JS', 'Redux Toolkit', 'Material UI'],
@@ -11,8 +10,7 @@ export const projects = [
 	},
 	{
 		title: 'Sportika Mobile',
-		imgUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678880229/portfolio/tn8bbfox63zvncvtekoh.png',
+		imgUrl: 'sportika_mobile',
 		description:
 			"This is an app built with React Native. It's an e-commerce built for mobiles. It's the same app as Sportika for mobiles.",
 		technologies: ['React Native', 'Redux Toolkit', 'Stripe'],
@@ -21,8 +19,7 @@ export const projects = [
 	},
 	{
 		title: 'Sportika REST API',
-		imgUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678880383/portfolio/af0voadkadm6qtvig3dp.png',
+		imgUrl: 'node',
 		description:
 			'This app was built with Node.Js. This app allows the user to manage the exchange of data necessary for web and mobile e-commerce (Sportika) works.',
 		technologies: ['Node.JS', 'Express', 'Sendgrid', 'Stripe'],
@@ -31,8 +28,7 @@ export const projects = [
 	},
 	{
 		title: 'Portfolio',
-		imgUrl:
-			'https://res.cloudinary.com/dlz1bhh8j/image/upload/v1678880580/portfolio/fegau5gshibuvh0rmwx3.png',
+		imgUrl: 'portfolio',
 		description:
 			'It is a web app built with Next.Js. This app is a website to showcase my work and let others know about myself.',
 		technologies: ['Next.JS', 'Tailwind CSS', 'React'],
