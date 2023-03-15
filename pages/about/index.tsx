@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React, { FC } from 'react';
 
 import styles from './about.module.css';
-import { Navbar, TextSphere } from '../components';
+import { Navbar, TextSphere } from '../../components';
 
 const About: FC = () => {
 	return (

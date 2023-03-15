@@ -1,17 +1,10 @@
-.container {
-	width: 100%;
-	display: flex;
-}
-
 .firstContainer {
-	width: 45%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
 .secondContainer {
-	width: 55%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +13,27 @@
 .image {
 	width: 90%;
 	border-radius: 20px;
-	transform: skewY(5deg);
+	transform: skewY(7deg);
+	box-shadow: rgba(255, 255, 255, 0.55) 0px 5px 15px;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.imageOdd {
+	width: 90%;
+	border-radius: 20px;
+	transform: skewY(-7deg);
+	box-shadow: rgba(255, 255, 255, 0.55) 0px 5px 15px;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.image:hover {
+	transform: skewY(-7deg);
+}
+
+.imageOdd:hover {
+	transform: skewY(7deg);
 }
 
 .button {
@@ -60,4 +73,14 @@
 .button:hover:after {
 	height: 100%;
 	width: 100%;
+}
+
+@media (max-width: 500px) {
+	.image {
+		width: 100%;
+	}
+
+	.imageOdd {
+		width: 100%;
+	}
 }

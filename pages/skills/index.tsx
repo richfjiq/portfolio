@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 
 import styles from './skills.module.css';
-import { Navbar } from '../components';
+import { Navbar } from '../../components';
 
 const Skills: FC = () => {
 	return (

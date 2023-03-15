@@ -1,12 +1,12 @@
 .container {
 	opacity: 0;
-	animation: fadeInUp 1s ease 1s forwards;
+	animation: fadeInUp 0.5s ease 0.5s forwards;
 }
 
 .headerContainer {
 	opacity: 0;
 	transform: translateY(-200px);
-	animation: headerAnimation 1s ease forwards;
+	animation: headerAnimation 0.5s ease forwards;
 }
 
 .btnContainer {
@@ -14,7 +14,7 @@
 	justify-content: center;
 	transform: translateY(200px);
 	opacity: 0;
-	animation: buttonAnimation 1s ease 2s forwards;
+	animation: buttonAnimation 0.5s ease forwards;
 }
 
 .button {
