@@ -9,7 +9,7 @@ const About: FC = () => {
 		<Navbar title="About">
 			<div className="max-w-[1240px] m-auto gap-8">
 				<div className={`flex justify-center ${styles.headerContainer}`}>
-					<h1 className={`mb-5 mt-5 min-[700px]:mt-0 text-center`}>About me</h1>
+					<h1 className={`mb-5 mt-5 min-[500px]:mt-10 text-center`}>About me</h1>
 				</div>
 				<div className={`grid grid-cols-12 ${styles.container}`}>
 					<div

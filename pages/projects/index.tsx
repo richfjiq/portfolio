@@ -8,7 +8,7 @@ const Projects: FC = () => {
 	return (
 		<Navbar title="Projects">
 			<div className={`max-w-[1240px] h-full flex flex-col mx-auto px-5 ${styles.container}`}>
-				<h1 className="mt-5 pb-5 text-center">What I&apos;ve Built</h1>
+				<h1 className="mt-5 pb-5 min-[500px]:mt-10">What I&apos;ve Built</h1>
 				{projects.map((el, i) => {
 					const odd = (i + 1) % 2 === 0;
 

@@ -3,7 +3,7 @@
 	position: relative;
 	opacity: 0;
 	transform: translateY(500px);
-	animation: fromBottom 1s ease forwards;
+	animation: fromBottom 0.5s ease forwards;
 }
 
 .button {
@@ -117,13 +117,13 @@
 .experienceContainer {
 	opacity: 0;
 	transform: translateX(-500px);
-	animation: fromLeft 1s ease forwards;
+	animation: fromLeft 0.5s ease forwards;
 }
 
 .skillsContainer {
 	opacity: 0;
 	transform: translateX(500px);
-	animation: fromRight 1s ease forwards;
+	animation: fromRight 0.5s ease forwards;
 }
 
 @keyframes fromLeft {
