@@ -38,7 +38,7 @@ const Contact: FC = () => {
 	return (
 		<Navbar title="Contact">
 			<div className="max-w-[1240px] flex flex-col mx-auto">
-				<h1 className="text-center mb-5 mt-5">Contact me</h1>
+				<h1 className="text-center mb-10 mt-5">Contact me</h1>
 				<div className="flex w-full flex-col sm:flex-row">
 					<form
 						onSubmit={handleSubmit(onSendMessage)}

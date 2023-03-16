@@ -15,14 +15,14 @@ const About: FC = () => {
 					<div
 						className={`col-start-2 col-span-10 min-[700px]:col-start-1 min-[700px]:pl-10 min-[700px]:col-span-6 flex flex-col justify-center`}
 					>
-						<p className="py-5 text-justify text-[#f7f1e3]-600 text-base min-[700px]:text-left min-[700px]:text-xl">
+						<p className="py-5 text-left text-[#f7f1e3]-600 text-base min-[700px]:text-left min-[700px]:text-xl">
 							I&apos;m a full-stack junior developer. I&apos;m enthusiastic about acquiring more
 							knowledge and experience that will allow me to be a better developer.
 						</p>
-						<p className="text-[#f7f1e3]-600 text-justify min-[700px]:text-left text-base min-[700px]:text-xl">
+						<p className="text-[#f7f1e3]-600 text-left min-[700px]:text-left text-base min-[700px]:text-xl">
 							I&apos;m a well-organized person, problem solver, with high attention to detail.
 						</p>
-						<p className="py-5 text-justify min-[700px]:text-left text-[#f7f1e3]-600 text-base min-[700px]:text-xl">
+						<p className="py-5 text-left min-[700px]:text-left text-[#f7f1e3]-600 text-base min-[700px]:text-xl">
 							Interested in the entire frontend spectrum, so the backend and working on ambitious
 							projects with positive people.
 						</p>

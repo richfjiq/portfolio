@@ -1,12 +1,13 @@
 .container {
 	opacity: 0;
-	animation: fadeInUp 0.5s ease 0.5s forwards;
+	animation: fadeInUp 0.5s ease forwards;
 }
 
 .headerContainer {
 	opacity: 0;
 	transform: translateY(-200px);
 	animation: headerAnimation 0.5s ease forwards;
+	overflow: hidden;
 }
 
 .btnContainer {
@@ -15,6 +16,7 @@
 	transform: translateY(200px);
 	opacity: 0;
 	animation: buttonAnimation 0.5s ease forwards;
+	overflow: hidden;
 }
 
 .button {
