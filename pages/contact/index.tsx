@@ -1,8 +1,11 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import emailjs from '@emailjs/browser';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from './contact.module.css';
 import { Navbar } from '../../components';
@@ -16,15 +19,19 @@ type FormData = {
 };
 
 const Contact: FC = () => {
+	const [disable, setDisable] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset,
 	} = useForm<FormData>({
 		resolver: yupResolver(formValidation),
 	});
 
-	const onSendMessage = ({ name, email, subject, message }: FormData) => {
+	const onSendMessage = async ({ name, email, subject, message }: FormData) => {
+		setDisable(true);
+
 		const body = {
 			name,
 			email,
@@ -32,12 +39,27 @@ const Contact: FC = () => {
 			message,
 		};
 
-		return body;
+		await toast.promise(
+			emailjs.send(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+				body,
+				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
+			),
+			{
+				pending: 'Sending message',
+				success: 'Message sent',
+				error: "The message couldn't be sent",
+			},
+		);
+
+		reset();
+		setDisable(false);
 	};
 
 	return (
 		<Navbar title="Contact">
-			<div className="max-w-[1240px] flex flex-col mx-auto">
+			<div className={`max-w-[1240px] flex flex-col mx-auto ${styles.contact}`}>
 				<h1 className="text-center mb-10 mt-5">Contact me</h1>
 				<div className="flex w-full flex-col sm:flex-row">
 					<form
@@ -45,7 +67,7 @@ const Contact: FC = () => {
 						className="w-[90%] border-2 rounded-lg sm:border-none mx-auto sm:w-[60%] flex flex-col py-10 sm:p-5 mb-10 sm:mb-0"
 					>
 						<div className="w-[90%] flex flex-col mx-auto">
-							<div className="w-full flex flex-col justify-between mb-10">
+							<div className="relative w-full flex flex-col justify-between mb-10">
 								<input
 									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3]"
 									id="name"
@@ -54,12 +76,15 @@ const Contact: FC = () => {
 									{...register('name')}
 								/>
 								{errors.name && (
-									<p role="alert" className="text-sm text-[#e74c3c] mt-[3px] ml-1">
+									<p
+										role="alert"
+										className="absolute text-sm text-[#e74c3c] mt-[3px] bottom-[-22px]"
+									>
 										{errors.name?.message}
 									</p>
 								)}
 							</div>
-							<div className="w-[100%] mb-10">
+							<div className="relative w-[100%] mb-10">
 								<input
 									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
 									id="email"
@@ -68,12 +93,15 @@ const Contact: FC = () => {
 									{...register('email')}
 								/>
 								{errors.email && (
-									<p role="alert" className="text-sm text-[#e74c3c] mt-[3px] ml-1">
+									<p
+										role="alert"
+										className="absolute bottom-[-22px] text-sm text-[#e74c3c] mt-[3px] ml-1"
+									>
 										{errors.email?.message}
 									</p>
 								)}
 							</div>
-							<div className="w-[100%] mb-10">
+							<div className="relative w-[100%] mb-10">
 								<input
 									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
 									id="subject"
@@ -81,11 +109,14 @@ const Contact: FC = () => {
 									placeholder="Subject"
 									{...register('subject')}
 								/>
-								<p role="alert" className="text-sm text-[#e74c3c] mt-[3px] ml-1">
+								<p
+									role="alert"
+									className="absolute bottom-[-22px] text-sm text-[#e74c3c] mt-[3px] ml-1"
+								>
 									{errors.subject?.message}
 								</p>
 							</div>
-							<div className="w-[100%] mb-10">
+							<div className="relative w-[100%] mb-14">
 								<textarea
 									className="appearance-none rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
 									id="message"
@@ -93,12 +124,12 @@ const Contact: FC = () => {
 									rows={5}
 									{...register('message')}
 								/>
-								<p role="alert" className="text-sm text-[#e74c3c] mt-[3px] ml-1">
+								<p role="alert" className="absolute bottom-[-15px] text-sm text-[#e74c3c] ml-1">
 									{errors.message?.message}
 								</p>
 							</div>
 							<div className="flex justify-center">
-								<button type="submit" className={`${styles.button}`}>
+								<button type="submit" className={`${styles.button}`} disabled={disable}>
 									Send message
 								</button>
 							</div>
@@ -174,6 +205,7 @@ const Contact: FC = () => {
 						</div>
 					</div>
 				</div>
+				<ToastContainer position="top-center" />
 			</div>
 		</Navbar>
 	);

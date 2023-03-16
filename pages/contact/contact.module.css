@@ -1,3 +1,8 @@
+.contact {
+	opacity: 0;
+	animation: appears 0.5s ease forwards;
+}
+
 .button {
 	padding: 15px 40px;
 	position: relative;
@@ -29,4 +34,10 @@
 
 .buttonLink:hover {
 	transform: scale(1.2);
+}
+
+@keyframes appears {
+	to {
+		opacity: 1;
+	}
 }
