@@ -2,8 +2,7 @@
 	display: flex;
 	position: relative;
 	opacity: 0;
-	transform: translateY(500px);
-	animation: fromBottom 1s ease forwards;
+	animation: fromBottom 0.5s ease forwards;
 }
 
 .button {
@@ -60,7 +59,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 50%;
+	width: 65%;
 	border-bottom: 4px solid #d63031;
 }
 
@@ -70,7 +69,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 25%;
+	width: 40%;
 	border-bottom: 4px solid #0984e3;
 }
 
@@ -80,7 +79,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 50%;
+	width: 70%;
 	border-bottom: 4px solid #ffa502;
 }
 
@@ -90,7 +89,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 50%;
+	width: 70%;
 	border-bottom: 4px solid #5f27cd;
 }
 
@@ -100,7 +99,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 25%;
+	width: 40%;
 	border-bottom: 4px solid #27ae60;
 }
 
@@ -110,39 +109,34 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 25%;
+	width: 50%;
 	border-bottom: 4px solid #ff9ff3;
 }
 
 .experienceContainer {
 	opacity: 0;
-	transform: translateX(-500px);
-	animation: fromLeft 1s ease forwards;
+	animation: fromLeft 0.5s ease forwards;
 }
 
 .skillsContainer {
 	opacity: 0;
-	transform: translateX(500px);
-	animation: fromRight 1s ease forwards;
+	animation: fromRight 0.5s ease forwards;
 }
 
 @keyframes fromLeft {
 	to {
 		opacity: 1;
-		transform: translateX(0);
 	}
 }
 
 @keyframes fromRight {
 	to {
 		opacity: 1;
-		transform: translateX(0);
 	}
 }
 
 @keyframes fromBottom {
 	to {
 		opacity: 1;
-		transform: translateY(0);
 	}
 }

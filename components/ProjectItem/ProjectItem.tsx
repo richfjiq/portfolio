@@ -26,7 +26,7 @@ const ProjectItem: FC<Props> = ({ title, image, urlDemo, urlCode, description, o
 				className={`py-5 w-[100%] min-[500px]:w-[90%] min-[800px]:w-[45%] ${styles.firstContainer}`}
 			>
 				<h2 className="text-center mb-5 text-xl min-[800px]:text-2xl">{title}</h2>
-				<p className="text-justify">{description}</p>
+				<p className="text-left">{description}</p>
 				<div className="flex justify-around mt-10">
 					<Link href={urlDemo} target="_blank" className={styles.button}>
 						<span className="span">Demo</span>

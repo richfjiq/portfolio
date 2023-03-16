@@ -1,0 +1,43 @@
+.contact {
+	opacity: 0;
+	animation: appears 0.5s ease forwards;
+}
+
+.button {
+	padding: 15px 40px;
+	position: relative;
+	font-weight: 500;
+	border: 2px solid #e74c3c;
+	background: #e74c3c;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	box-shadow: rgba(255, 255, 255, 255.24) 1px 1px 3px;
+	transform: scale(1);
+}
+
+.button:hover {
+	transform: scale(1.2);
+}
+
+.buttonLink {
+	width: 200px;
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	background-color: #f7f1e3;
+	transform: scale(1);
+	transition: all 0.3s ease;
+	box-shadow: rgba(255, 255, 255, 255.24) 0px 2px 4px;
+}
+
+.buttonLink:hover {
+	transform: scale(1.2);
+}
+
+@keyframes appears {
+	to {
+		opacity: 1;
+	}
+}
