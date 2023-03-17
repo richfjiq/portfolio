@@ -18,34 +18,41 @@ const skills = [
 
 const TextSphere: FC = () => {
 	const isTagCloudLoaded = useRef<HTMLSpanElement>(null);
-	const [radius, setRadius] = useState(200);
+	const [radius, setRadius] = useState(0);
+
+	const handleResize = (widthScreen: number) => {
+		switch (true) {
+			case widthScreen >= 1100:
+				setRadius(210);
+				break;
+			case widthScreen >= 1000:
+				setRadius(195);
+				break;
+			case widthScreen >= 900:
+				setRadius(185);
+				break;
+			case widthScreen >= 800:
+				setRadius(175);
+				break;
+			case widthScreen >= 700:
+				setRadius(150);
+				break;
+			case widthScreen >= 400:
+				setRadius(180);
+				break;
+			default:
+				setRadius(150);
+				break;
+		}
+	};
 
 	useEffect(() => {
-		window.addEventListener('resize', () => {
-			switch (true) {
-				case window.innerWidth >= 1100:
-					setRadius(210);
-					break;
-				case window.innerWidth >= 1000:
-					setRadius(195);
-					break;
-				case window.innerWidth >= 900:
-					setRadius(185);
-					break;
-				case window.innerWidth >= 800:
-					setRadius(175);
-					break;
-				case window.innerWidth >= 700:
-					setRadius(150);
-					break;
-				case window.innerWidth >= 400:
-					setRadius(180);
-					break;
-				default:
-					setRadius(150);
-					break;
-			}
-		});
+		handleResize(window.innerWidth);
+	}, []);
+
+	useEffect(() => {
+		window.addEventListener('resize', () => handleResize(window.innerWidth));
+		return () => window.removeEventListener('resize', () => handleResize(window.innerWidth));
 	}, []);
 
 	useEffect(() => {

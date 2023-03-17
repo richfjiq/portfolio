@@ -95,15 +95,19 @@ const Navbar: FC<Props> = ({ children, title }) => {
 
 				<div
 					id="sidebarBg"
-					className={nav ? 'fixed left-0 top-0 w-full h-[100%] bg-[#000]/50 md:hidden' : ''}
+					className={
+						nav
+							? 'fixed top-0 w-full h-[100%] bg-[#000]/50 md:hidden translate-x-[0] transition-transform duration-500 ease-in'
+							: 'fixed z-10 top-0 w-full h-[100%] bg-[#000]/50 md:hidden translate-x-[-100%] transition-transform duration-500 ease-out'
+					}
 					onClick={() => setNav(false)}
 				>
 					<div
 						id="sidebar"
 						className={
 							nav
-								? `fixed bg-[#2f3542] left-0 top-0 w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%]  py-10 px-6 `
-								: 'fixed h-[100%] left-[-100%] top-0 p-10  bg-[#000]/50'
+								? `fixed bg-[#2f3542] translate-x-[0] top-0 transition-transform duration-500 ease-in w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] py-10 px-6`
+								: 'fixed bg-[#2f3542] translate-x-[-55%] top-0 transition-transform duration-500 ease-out w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] py-10 px-6'
 						}
 						onClick={(e) => e.stopPropagation()}
 					>
