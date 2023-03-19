@@ -1,22 +1,11 @@
 .container {
 	opacity: 0;
-	animation: fadeInUp 0.5s ease forwards;
-}
-
-.headerContainer {
-	opacity: 0;
-	transform: translateY(-200px);
-	animation: headerAnimation 0.5s ease forwards;
-	overflow: hidden;
+	animation: fadeIn 2s ease forwards;
 }
 
 .btnContainer {
 	display: flex;
 	justify-content: center;
-	transform: translateY(200px);
-	opacity: 0;
-	animation: buttonAnimation 0.5s ease forwards;
-	overflow: hidden;
 }
 
 .button {
@@ -65,22 +54,8 @@
 	top: 0;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
 	to {
 		opacity: 1;
-	}
-}
-
-@keyframes headerAnimation {
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes buttonAnimation {
-	to {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }

@@ -1,6 +1,6 @@
 .contact {
 	opacity: 0;
-	animation: appears 0.5s ease forwards;
+	animation: fadeIn 2s ease forwards;
 }
 
 .button {
@@ -36,7 +36,7 @@
 	transform: scale(1.2);
 }
 
-@keyframes appears {
+@keyframes fadeIn {
 	to {
 		opacity: 1;
 	}

@@ -69,7 +69,7 @@ const Contact: FC = () => {
 						<div className="w-[90%] flex flex-col mx-auto">
 							<div className="relative w-full flex flex-col justify-between mb-10">
 								<input
-									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3]"
+									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-outer-space leading-tight focus:outline-none focus:bg-white focus:border-blue-cola"
 									id="name"
 									type="text"
 									placeholder="Name"
@@ -78,7 +78,7 @@ const Contact: FC = () => {
 								{errors.name && (
 									<p
 										role="alert"
-										className="absolute text-sm text-[#e74c3c] mt-[3px] bottom-[-22px]"
+										className="absolute text-sm text-persian-red mt-[3px] bottom-[-22px]"
 									>
 										{errors.name?.message}
 									</p>
@@ -86,7 +86,7 @@ const Contact: FC = () => {
 							</div>
 							<div className="relative w-[100%] mb-10">
 								<input
-									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
+									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-outer-space leading-tight focus:outline-none focus:bg-white focus:border-blue-cola focus:border-2"
 									id="email"
 									type="text"
 									placeholder="Email"
@@ -95,7 +95,7 @@ const Contact: FC = () => {
 								{errors.email && (
 									<p
 										role="alert"
-										className="absolute bottom-[-22px] text-sm text-[#e74c3c] mt-[3px] ml-1"
+										className="absolute bottom-[-22px] text-sm text-persian-red mt-[3px] ml-1"
 									>
 										{errors.email?.message}
 									</p>
@@ -103,7 +103,7 @@ const Contact: FC = () => {
 							</div>
 							<div className="relative w-[100%] mb-10">
 								<input
-									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
+									className="appearance-none font-medium rounded w-full py-2 px-2 border-2 text-outer-space leading-tight focus:outline-none focus:bg-white focus:border-blue-cola focus:border-2"
 									id="subject"
 									type="text"
 									placeholder="Subject"
@@ -111,20 +111,20 @@ const Contact: FC = () => {
 								/>
 								<p
 									role="alert"
-									className="absolute bottom-[-22px] text-sm text-[#e74c3c] mt-[3px] ml-1"
+									className="absolute bottom-[-22px] text-sm text-persian-red mt-[3px] ml-1"
 								>
 									{errors.subject?.message}
 								</p>
 							</div>
 							<div className="relative w-[100%] mb-14">
 								<textarea
-									className="appearance-none rounded w-full py-2 px-2 border-2 text-[#2f3542] leading-tight focus:outline-none focus:bg-white focus:border-[#0984e3] focus:border-2"
+									className="appearance-none rounded w-full py-2 px-2 border-2 text-outer-space leading-tight focus:outline-none focus:bg-white focus:border-blue-cola focus:border-2"
 									id="message"
 									placeholder="Message"
 									rows={5}
 									{...register('message')}
 								/>
-								<p role="alert" className="absolute bottom-[-15px] text-sm text-[#e74c3c] ml-1">
+								<p role="alert" className="absolute bottom-[-15px] text-sm text-persian-red ml-1">
 									{errors.message?.message}
 								</p>
 							</div>
@@ -150,7 +150,7 @@ const Contact: FC = () => {
 									height={35}
 									className="mr-3"
 								/>
-								<p className="font-semibold text-[#2f3542]">Github</p>
+								<p className="font-semibold text-outer-space">Github</p>
 							</Link>
 						</div>
 
@@ -166,7 +166,7 @@ const Contact: FC = () => {
 									height={35}
 									className="mr-3"
 								/>
-								<p className="font-semibold text-[#2f3542]">Email</p>
+								<p className="font-semibold text-outer-space">Email</p>
 							</Link>
 						</div>
 
@@ -182,7 +182,7 @@ const Contact: FC = () => {
 									height={35}
 									className="mr-3"
 								/>
-								<p className="font-semibold text-[#2f3542]">Skype</p>
+								<p className="font-semibold text-outer-space">Skype</p>
 							</Link>
 						</div>
 
@@ -200,7 +200,7 @@ const Contact: FC = () => {
 									height={35}
 									className="mr-3"
 								/>
-								<p className="font-semibold text-[#2f3542]">Twitter</p>
+								<p className="font-semibold text-outer-space">Twitter</p>
 							</Link>
 						</div>
 					</div>

@@ -7,11 +7,11 @@ import { Navbar, TextSphere } from '../../components';
 const About: FC = () => {
 	return (
 		<Navbar title="About">
-			<div className="max-w-[1240px] m-auto gap-8">
-				<div className={`flex justify-center ${styles.headerContainer}`}>
+			<div className={`max-w-[1240px] m-auto gap-8 ${styles.container}`}>
+				<div className={`flex justify-center`}>
 					<h1 className={`mb-5 mt-5 min-[500px]:mt-10 text-center`}>About me</h1>
 				</div>
-				<div className={`grid grid-cols-12 ${styles.container}`}>
+				<div className={`grid grid-cols-12`}>
 					<div
 						className={`col-start-2 col-span-10 min-[700px]:col-start-1 min-[700px]:pl-10 min-[700px]:col-span-6 flex flex-col justify-center`}
 					>

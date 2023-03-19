@@ -43,7 +43,7 @@ const Navbar: FC<Props> = ({ children, title }) => {
 				<meta name="theme-color" content="#f7f1e3" />
 			</Head>
 			<div className={styles.container}>
-				<div className={`flex items-center justify-center w-[100%] bg-[#2f3542]/90`}>
+				<div className={`flex items-center justify-center w-[100%] bg-[outer-space]/90`}>
 					<div
 						className={`flex justify-between items-center w-[100%] max-w-[1240px] h-full px-4 2xl:px-16 pt-6`}
 					>
@@ -97,16 +97,16 @@ const Navbar: FC<Props> = ({ children, title }) => {
 					<div
 						className={
 							nav
-								? 'fixed z-20 left-0 top-0 w-full h-[100svh] bg-[#000]/50 md:hidden'
-								: 'fixed z-20 left-[-100%] top-0 w-[100%] h-[100svh] bg-[#000]/0'
+								? 'fixed z-20 left-0 top-0 w-full h-[100svh] bg-[black]/50 md:hidden'
+								: 'fixed z-20 left-[-100%] top-0 w-[100%] h-[100svh] bg-[black]/0'
 						}
 						onClick={() => setNav(false)}
 					>
 						<div
 							className={
 								nav
-									? `fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-0 top-0 bg-[#2f3542] ease-in duration-[350ms]`
-									: 'fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-[-100%] top-0 bg-[#2f3542] ease-in duration-[350ms]'
+									? `fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-0 top-0 bg-outer-space ease-in duration-[350ms]`
+									: 'fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-[-100%] top-0 bg-outer-space ease-in duration-[350ms]'
 							}
 							onClick={(e) => e.stopPropagation()}
 						>
@@ -117,14 +117,11 @@ const Navbar: FC<Props> = ({ children, title }) => {
 									width={77}
 									height={35}
 								/>
-								<div
-									onClick={toggleNavbar}
-									className="cursor-pointer rounded-full p-1 bg-[#f7f1e3]"
-								>
-									<AiOutlineClose size={18} className="text-[#24305e]" />
+								<div onClick={toggleNavbar} className="cursor-pointer rounded-full p-1 bg-linen">
+									<AiOutlineClose size={18} className="text-indigo" />
 								</div>
 							</div>
-							<div className="border-b border-[#f7f1e3]-300 mt-7" />
+							<div className="border-b border-linen-300 mt-7" />
 							<div className="py-4">
 								<ul className="uppercase flex flex-col">
 									<Link
