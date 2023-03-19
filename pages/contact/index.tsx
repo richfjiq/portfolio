@@ -135,7 +135,7 @@ const Contact: FC = () => {
 							</div>
 						</div>
 					</form>
-					<div className="w-[90%] mx-auto sm:w-[40%] p-5 flex flex-col justify-center">
+					<div className="w-[90%] mx-auto sm:w-[40%] p-5 flex flex-col">
 						<div className="flex justify-center">
 							<Link
 								href="https://github.com/richfjiq"
@@ -148,9 +148,7 @@ const Contact: FC = () => {
 									alt="html"
 									width={35}
 									height={35}
-									className="mr-3"
 								/>
-								<p className="font-semibold text-outer-space">Github</p>
 							</Link>
 						</div>
 
@@ -164,9 +162,7 @@ const Contact: FC = () => {
 									alt="html"
 									width={35}
 									height={35}
-									className="mr-3"
 								/>
-								<p className="font-semibold text-outer-space">Email</p>
 							</Link>
 						</div>
 
@@ -180,9 +176,7 @@ const Contact: FC = () => {
 									alt="html"
 									width={35}
 									height={35}
-									className="mr-3"
 								/>
-								<p className="font-semibold text-outer-space">Skype</p>
 							</Link>
 						</div>
 
@@ -198,9 +192,7 @@ const Contact: FC = () => {
 									alt="html"
 									width={35}
 									height={35}
-									className="mr-3"
 								/>
-								<p className="font-semibold text-outer-space">Twitter</p>
 							</Link>
 						</div>
 					</div>
