@@ -66,3 +66,23 @@
 .childrenContainer {
 	margin: auto 0;
 }
+
+.sidebar_visible {
+	animation: visible 1s ease-out forwards;
+}
+
+.sidebar_hidden {
+	animation: hidden 1s ease-out forwards;
+}
+
+@keyframes hidden {
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes visible {
+	to {
+		transform: translateX(0);
+	}
+}

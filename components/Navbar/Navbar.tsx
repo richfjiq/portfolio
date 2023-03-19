@@ -44,8 +44,10 @@ const Navbar: FC<Props> = ({ children, title }) => {
 			</Head>
 			<div className={styles.container}>
 				<div className={`flex items-center justify-center w-[100%] bg-[#2f3542]/90`}>
-					<div className="flex justify-between items-center w-[100%] max-w-[1240px] px-4 2xl:px-16 pt-6 ">
-						<Link href="/" className={styles.logo}>
+					<div
+						className={`flex justify-between items-center w-[100%] max-w-[1240px] h-full px-4 2xl:px-16 pt-6`}
+					>
+						<Link href="/" className={`${styles.logo}`}>
 							<Image
 								src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
 								alt="portfolio_logo"
@@ -91,27 +93,23 @@ const Navbar: FC<Props> = ({ children, title }) => {
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div
-					id="sidebarBg"
-					className={
-						nav
-							? 'fixed top-0 w-full h-[100%] bg-[#000]/50 md:hidden translate-x-[0] transition-transform duration-500 ease-in'
-							: 'fixed z-10 top-0 w-full h-[100%] bg-[#000]/50 md:hidden translate-x-[-100%] transition-transform duration-500 ease-out'
-					}
-					onClick={() => setNav(false)}
-				>
 					<div
-						id="sidebar"
 						className={
 							nav
-								? `fixed bg-[#2f3542] translate-x-[0] top-0 transition-transform duration-500 ease-in w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] py-10 px-6`
-								: 'fixed bg-[#2f3542] translate-x-[-55%] top-0 transition-transform duration-500 ease-out w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] h-[100%] py-10 px-6'
+								? 'fixed z-20 left-0 top-0 w-full h-[100svh] bg-[#000]/50 md:hidden'
+								: 'fixed z-20 left-[-100%] top-0 w-[100%] h-[100svh] bg-[#000]/0'
 						}
-						onClick={(e) => e.stopPropagation()}
+						onClick={() => setNav(false)}
 					>
-						<div>
+						<div
+							className={
+								nav
+									? `fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-0 top-0 bg-[#2f3542] ease-in duration-[350ms]`
+									: 'fixed py-10 px-6 h-[100vh] w-[55%] min-[500px]:w-[45%] min-[600px]:w-[40%] left-[-100%] top-0 bg-[#2f3542] ease-in duration-[350ms]'
+							}
+							onClick={(e) => e.stopPropagation()}
+						>
 							<div className="flex w-full items-center justify-between ">
 								<Image
 									src="https://res.cloudinary.com/dlz1bhh8j/image/upload/v1672333574/skills/zudmjm7cmmpkklfqtvs0.png"
@@ -127,66 +125,65 @@ const Navbar: FC<Props> = ({ children, title }) => {
 								</div>
 							</div>
 							<div className="border-b border-[#f7f1e3]-300 mt-7" />
-						</div>
-						<div className="py-4">
-							<ul className="uppercase flex flex-col">
-								<Link
-									className={`py-4 text-lg flex items-center ${
-										pathname === '/' ? styles.sidebarActiveLink : {}
-									}`}
-									href="/"
-									onClick={() => setNav(!nav)}
-								>
-									<AiOutlineHome className="mr-3" />
-									Home
-								</Link>
-								<Link
-									className={`py-4 text-lg flex items-center ${
-										pathname === '/about' ? styles.sidebarActiveLink : {}
-									}`}
-									href="/about"
-									onClick={() => setNav(!nav)}
-								>
-									<AiOutlineInfoCircle className="mr-3" />
-									About
-								</Link>
-								<Link
-									className={`py-4 text-lg flex items-center ${
-										pathname === '/skills' ? styles.sidebarActiveLink : {}
-									}`}
-									href="/skills"
-									onClick={() => setNav(!nav)}
-								>
-									<AiOutlineBulb className="mr-3" />
-									Skills
-								</Link>
-								<Link
-									className={`py-4 text-lg flex items-center ${
-										pathname === '/projects' ? styles.sidebarActiveLink : {}
-									}`}
-									href="/projects"
-									onClick={() => setNav(!nav)}
-								>
-									<AiOutlineFundProjectionScreen className="mr-3" />
-									Projects
-								</Link>
-								<Link
-									className={`py-4 text-lg flex items-center ${
-										pathname === '/contact' ? styles.sidebarActiveLink : {}
-									}`}
-									href="/contact"
-									onClick={() => setNav(!nav)}
-								>
-									<AiOutlineMail className="mr-3" />
-									Contact
-								</Link>
-							</ul>
+							<div className="py-4">
+								<ul className="uppercase flex flex-col">
+									<Link
+										className={`py-4 text-lg flex items-center ${
+											pathname === '/' ? styles.sidebarActiveLink : {}
+										}`}
+										href="/"
+										onClick={() => setNav(!nav)}
+									>
+										<AiOutlineHome className="mr-3" />
+										Home
+									</Link>
+									<Link
+										className={`py-4 text-lg flex items-center ${
+											pathname === '/about' ? styles.sidebarActiveLink : {}
+										}`}
+										href="/about"
+										onClick={() => setNav(!nav)}
+									>
+										<AiOutlineInfoCircle className="mr-3" />
+										About
+									</Link>
+									<Link
+										className={`py-4 text-lg flex items-center ${
+											pathname === '/skills' ? styles.sidebarActiveLink : {}
+										}`}
+										href="/skills"
+										onClick={() => setNav(!nav)}
+									>
+										<AiOutlineBulb className="mr-3" />
+										Skills
+									</Link>
+									<Link
+										className={`py-4 text-lg flex items-center ${
+											pathname === '/projects' ? styles.sidebarActiveLink : {}
+										}`}
+										href="/projects"
+										onClick={() => setNav(!nav)}
+									>
+										<AiOutlineFundProjectionScreen className="mr-3" />
+										Projects
+									</Link>
+									<Link
+										className={`py-4 text-lg flex items-center ${
+											pathname === '/contact' ? styles.sidebarActiveLink : {}
+										}`}
+										href="/contact"
+										onClick={() => setNav(!nav)}
+									>
+										<AiOutlineMail className="mr-3" />
+										Contact
+									</Link>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className={styles.childrenContainer} style={nav ? { zIndex: '-10' } : {}}>
-					{children}
-				</div>
+
+				<div className={`${styles.childrenContainer}`}>{children}</div>
 			</div>
 		</>
 	);

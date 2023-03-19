@@ -34,7 +34,7 @@
 	width: 50%;
 	left: -1%;
 	top: -5px;
-	background-color: #d63031;
+	background-color: theme('colors.persian-red');
 	transform: skewX(30deg);
 	z-index: -1;
 	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -53,7 +53,7 @@
 	width: 50%;
 	left: 51%;
 	top: 5px;
-	background-color: #0984e3;
+	background-color: theme('colors.blue-cola');
 	transform: skewX(30deg);
 	z-index: -1;
 	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);

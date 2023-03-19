@@ -4,7 +4,7 @@
 }
 
 .nameText {
-	color: #0984e3;
+	color: theme('colors.blue-cola');
 }
 
 .btnContainer {
@@ -14,7 +14,7 @@
 }
 
 .btnAboutMe {
-	color: #f7f1e3;
+	color: theme('colors.linen');
 	padding: 15px 30px;
 	border-radius: 10px;
 	font-size: x-large;
@@ -30,7 +30,7 @@
 	left: -3px;
 	width: 100%;
 	height: 100%;
-	background-color: #d63031;
+	background-color: theme('colors.persian-red');
 	z-index: -1;
 	mix-blend-mode: multiply;
 	transition: all 0.2s;
@@ -50,7 +50,7 @@
 	left: 3px;
 	width: 100%;
 	height: 100%;
-	background-color: #0984e3;
+	background-color: theme('colors.blue-cola');
 	z-index: -1;
 	mix-blend-mode: multiply;
 	transition: all 0.2s;
@@ -85,13 +85,13 @@
 }
 
 .headerTyping::before {
-	background: #2f3542;
+	background: theme('colors.outer-space');
 	animation: typewriter 3s steps(16) 0.5s forwards;
 }
 
 .headerTyping::after {
 	width: 0.125em;
-	background: #f7f1e3;
+	background: theme('colors.linen');
 	animation: typewriter 3s steps(16) 0.5s forwards, blink 750ms steps(16) infinite;
 }
 
